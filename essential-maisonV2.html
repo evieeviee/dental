@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Maison Smile Dental | Boutique Family Dentistry</title>
+  <meta
+    name="description"
+    content="Maison Smile Dental offers thoughtful family dentistry, cosmetic care and comfortable treatment in a warm boutique clinic."
+  />
+  <meta name="theme-color" content="#5c3d2e" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --cream: #f5efe7;
+      --cream-light: #fffaf4;
+      --paper: #ffffff;
+      --brown: #5c3d2e;
+      --brown-dark: #31221b;
+      --terracotta: #c77c58;
+      --peach: #efd5c5;
+      --sage: #85917c;
+      --sage-soft: #e7ebe3;
+      --ink: #2c211c;
+      --text: #6f6159;
+      --line: #e5d8ce;
+      --shadow: 0 25px 70px rgba(74, 45, 31, 0.14);
+      --shadow-soft: 0 14px 38px rgba(74, 45, 31, 0.09);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    body.locked {
+      overflow: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    .brand-name {
+      font-family: "Libre Caslon Display", serif;
+      font-weight: 400;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 96px 0;
+    }
+
+    .announcement {
+      background: var(--brown-dark);
+      color: #f6e9df;
+      font-size: 13px;
+    }
+
+    .announcement-inner {
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-align: center;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(245, 239, 231, 0.94);
+      border-bottom: 1px solid rgba(229, 216, 206, 0.92);
+      backdrop-filter: blur(18px);
+    }
+
+    .navbar {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 43px;
+      height: 43px;
+      border-radius: 13px 13px 50% 50%;
+      display: grid;
+      place-items: center;
+      color: var(--cream-light);
+      background: var(--brown);
+      box-shadow: 0 10px 24px rgba(92, 61, 46, 0.2);
+    }
+
+    .brand-mark svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    .brand-name {
+      font-size: 23px;
+      line-height: 1;
+    }
+
+    .brand-subtitle {
+      display: block;
+      margin-top: 4px;
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: #594a42;
+    }
+
+    nav a:hover {
+      color: var(--terracotta);
+    }
+
+    .btn {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: var(--brown);
+      box-shadow: 0 12px 26px rgba(92, 61, 46, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: var(--brown-dark);
+    }
+
+    .btn-outline {
+      color: var(--brown);
+      background: transparent;
+      border-color: #cdb8aa;
+    }
+
+    .btn-light {
+      color: var(--brown);
+      background: var(--cream-light);
+    }
+
+    .menu-btn {
+      width: 46px;
+      height: 46px;
+      display: none;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--brown);
+      background: var(--cream-light);
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 760px;
+      padding: 88px 0 75px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      left: -290px;
+      top: -270px;
+      border-radius: 50%;
+      background: rgba(199, 124, 88, 0.12);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      right: -130px;
+      bottom: -100px;
+      border-radius: 50%;
+      border: 1px solid rgba(92, 61, 46, 0.13);
+      box-shadow:
+        0 0 0 45px rgba(92, 61, 46, 0.025),
+        0 0 0 90px rgba(92, 61, 46, 0.018);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 3;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--terracotta);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--terracotta);
+    }
+
+    h1 {
+      max-width: 600px;
+      font-size: clamp(54px, 7vw, 88px);
+      line-height: 0.98;
+      letter-spacing: -2.5px;
+      margin-bottom: 24px;
+    }
+
+    .hero-copy > p {
+      max-width: 520px;
+      color: var(--text);
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .avatar-stack {
+      display: flex;
+    }
+
+    .avatar-stack img {
+      width: 42px;
+      height: 42px;
+      object-fit: cover;
+      border: 3px solid var(--cream);
+      border-radius: 50%;
+      margin-left: -10px;
+    }
+
+    .avatar-stack img:first-child {
+      margin-left: 0;
+    }
+
+    .hero-trust strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .hero-trust span {
+      color: var(--text);
+      font-size: 12px;
+    }
+
+    .hero-gallery {
+      position: relative;
+      min-height: 610px;
+    }
+
+    .photo-main {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 72%;
+      height: 570px;
+      object-fit: cover;
+      border-radius: 190px 190px 28px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .photo-small {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 42%;
+      height: 300px;
+      object-fit: cover;
+      border: 12px solid var(--cream);
+      border-radius: 24px 120px 24px 24px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-card {
+      position: absolute;
+      right: 7%;
+      bottom: 8px;
+      max-width: 245px;
+      padding: 20px;
+      border-radius: 20px;
+      color: #fff;
+      background: var(--sage);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-card strong {
+      display: block;
+      font-family: "Libre Caslon Display", serif;
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+
+    .hero-card span {
+      color: #edf0e9;
+      font-size: 13px;
+    }
+
+    .floating-badge {
+      position: absolute;
+      left: 23%;
+      top: 40px;
+      width: 115px;
+      height: 115px;
+      display: grid;
+      place-items: center;
+      padding: 15px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      text-align: center;
+      color: var(--brown);
+      background: var(--cream-light);
+      box-shadow: var(--shadow-soft);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transform: rotate(-8deg);
+    }
+
+    .floating-badge b {
+      display: block;
+      font-family: "Libre Caslon Display", serif;
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .values {
+      padding: 0 0 70px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--cream-light);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .value-item {
+      padding: 28px 30px;
+      border-right: 1px solid var(--line);
+    }
+
+    .value-item:last-child {
+      border-right: 0;
+    }
+
+    .value-number {
+      display: block;
+      color: var(--terracotta);
+      font-family: "Libre Caslon Display", serif;
+      font-size: 36px;
+      line-height: 1;
+      margin-bottom: 9px;
+    }
+
+    .value-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .value-item p {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .services {
+      background: var(--cream-light);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 70px;
+      align-items: end;
+      margin-bottom: 44px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(42px, 5vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -1.8px;
+    }
+
+    .section-heading p {
+      max-width: 530px;
+      color: var(--text);
+      font-size: 17px;
+    }
+
+    .treatment-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+    }
+
+    .treatment-featured {
+      position: relative;
+      min-height: 620px;
+      border: 0;
+      border-radius: 28px;
+      overflow: hidden;
+      cursor: pointer;
+      text-align: left;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .treatment-featured img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .treatment-featured::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(39, 25, 19, 0.88), rgba(39, 25, 19, 0.05) 65%);
+    }
+
+    .featured-content {
+      position: absolute;
+      z-index: 2;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      color: #fff;
+    }
+
+    .featured-content small {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: #efd5c5;
+      font-weight: 800;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+
+    .featured-content h3 {
+      color: #fff;
+      font-size: 42px;
+      line-height: 1.05;
+      margin-bottom: 8px;
+    }
+
+    .featured-content p {
+      color: #eaded7;
+      max-width: 500px;
+    }
+
+    .treatment-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .treatment-card {
+      min-height: 190px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--paper);
+      cursor: pointer;
+      text-align: left;
+      transition: 0.25s ease;
+    }
+
+    .treatment-card:hover {
+      transform: translateY(-6px);
+      border-color: #d2b7a6;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .treatment-card:nth-child(2),
+    .treatment-card:nth-child(5) {
+      background: var(--sage-soft);
+    }
+
+    .treatment-card:nth-child(3) {
+      background: #f6e4da;
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--brown);
+      background: rgba(255, 255, 255, 0.68);
+      font-family: "Libre Caslon Display", serif;
+      font-size: 20px;
+    }
+
+    .card-arrow {
+      color: var(--terracotta);
+      font-size: 20px;
+    }
+
+    .treatment-card h3 {
+      font-size: 23px;
+      margin-bottom: 6px;
+    }
+
+    .treatment-card p {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .journey {
+      background: var(--brown);
+      color: #fff;
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .journey-copy h2 {
+      color: #fff;
+      font-size: clamp(44px, 5vw, 66px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .journey-copy > p {
+      color: #eaded8;
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .journey-steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .journey-step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .journey-step span {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--brown);
+      background: var(--peach);
+      font-family: "Libre Caslon Display", serif;
+      font-size: 21px;
+    }
+
+    .journey-step strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .journey-step p {
+      color: #d7c9c1;
+      font-size: 13px;
+    }
+
+    .journey-image-wrap {
+      position: relative;
+    }
+
+    .journey-image {
+      height: 590px;
+      object-fit: cover;
+      border-radius: 200px 200px 28px 28px;
+    }
+
+    .journey-quote {
+      position: absolute;
+      left: -35px;
+      bottom: 40px;
+      max-width: 280px;
+      padding: 22px;
+      border-radius: 18px;
+      color: var(--ink);
+      background: var(--cream-light);
+      box-shadow: var(--shadow);
+    }
+
+    .journey-quote p {
+      font-family: "Libre Caslon Display", serif;
+      font-size: 23px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .journey-quote span {
+      color: var(--text);
+      font-size: 12px;
+    }
+
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+    }
+
+    .contact-card {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: var(--cream-light);
+    }
+
+    .contact-card h3 {
+      font-size: 35px;
+      margin-bottom: 7px;
+    }
+
+    .contact-card > p {
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .info-row {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .info-row strong {
+      display: block;
+      color: var(--terracotta);
+      font-size: 11px;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .hours {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 8px 0;
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    .map-card {
+      min-height: 620px;
+      overflow: hidden;
+      border-radius: 26px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 620px;
+      border: 0;
+    }
+
+    .cta {
+      padding: 78px 0;
+      color: #fff;
+      background: var(--terracotta);
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .cta h2 {
+      color: #fff;
+      font-size: clamp(42px, 5vw, 64px);
+      line-height: 1.05;
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: #fff1e8;
+      max-width: 700px;
+    }
+
+    .cta .btn {
+      color: var(--brown);
+      background: #fff;
+    }
+
+    footer {
+      padding: 30px 0;
+      color: #d8ccc5;
+      background: var(--brown-dark);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 900;
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: #25d366;
+      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.34);
+      font-size: 26px;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(38, 26, 20, 0.76);
+      backdrop-filter: blur(9px);
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-card {
+      width: min(900px, 100%);
+      max-height: 90vh;
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      overflow: hidden;
+      border-radius: 30px;
+      background: var(--cream-light);
+      box-shadow: var(--shadow);
+      animation: modalIn 0.28s ease;
+    }
+
+    @keyframes modalIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .modal-image {
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      object-fit: cover;
+    }
+
+    .modal-content {
+      position: relative;
+      padding: 38px;
+      overflow: auto;
+    }
+
+    .modal-kicker {
+      color: var(--terracotta);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .modal-content h3 {
+      font-size: 46px;
+      line-height: 1.05;
+      margin-bottom: 14px;
+    }
+
+    .modal-content > p {
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .modal-list {
+      display: grid;
+      gap: 10px;
+      margin: 0 0 26px 20px;
+      color: #5e5149;
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      color: var(--brown);
+      background: #fff;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1020px) {
+      .hero-grid,
+      .section-heading,
+      .journey-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        max-width: 760px;
+      }
+
+      .hero-gallery {
+        max-width: 760px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .section-heading {
+        gap: 18px;
+      }
+
+      .treatment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .treatment-featured {
+        min-height: 500px;
+      }
+
+      .journey-image-wrap {
+        max-width: 700px;
+      }
+
+      .map-card,
+      .map-card iframe {
+        min-height: 430px;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .desktop-book {
+        display: none;
+      }
+
+      .menu-btn {
+        display: grid;
+      }
+
+      nav {
+        position: fixed;
+        top: 120px;
+        left: 4%;
+        right: 4%;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--cream-light);
+        box-shadow: var(--shadow);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        padding: 12px 4px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 62px;
+      }
+
+      .hero-gallery {
+        min-height: 520px;
+      }
+
+      .photo-main {
+        width: 82%;
+        height: 470px;
+      }
+
+      .photo-small {
+        width: 46%;
+        height: 230px;
+      }
+
+      .floating-badge {
+        left: 6%;
+        top: 24px;
+        width: 95px;
+        height: 95px;
+      }
+
+      .hero-card {
+        right: 0;
+        max-width: 220px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .value-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .value-item:last-child {
+        border-bottom: 0;
+      }
+
+      .treatment-list {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 74px 0;
+      }
+
+      .journey-image {
+        height: 470px;
+      }
+
+      .journey-quote {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        max-width: none;
+        margin: -55px 18px 0;
+      }
+
+      .cta-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .cta .btn {
+        width: 100%;
+      }
+
+      .modal-card {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-image {
+        min-height: 220px;
+        height: 230px;
+      }
+
+      .modal-content {
+        padding: 28px;
+      }
+
+      .modal-content h3 {
+        font-size: 37px;
+        padding-right: 35px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .announcement-inner {
+        min-height: 46px;
+        font-size: 12px;
+      }
+
+      nav {
+        top: 126px;
+      }
+
+      h1 {
+        font-size: clamp(52px, 15vw, 68px);
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-gallery {
+        min-height: 465px;
+      }
+
+      .photo-main {
+        width: 88%;
+        height: 410px;
+        border-radius: 140px 140px 24px 24px;
+      }
+
+      .photo-small {
+        height: 190px;
+      }
+
+      .hero-card {
+        max-width: 190px;
+        padding: 16px;
+      }
+
+      .hero-card strong {
+        font-size: 21px;
+      }
+
+      .treatment-featured {
+        min-height: 430px;
+      }
+
+      .featured-content h3 {
+        font-size: 34px;
+      }
+
+      .hours-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    QUICK CUSTOMISATION
+    1. Replace clinic name: Maison Smile Dental
+    2. Replace every WhatsApp number: 60123456789
+    3. Replace phone, email, address and opening hours
+    4. Replace the Google Maps query
+    5. Replace the sample image URLs with the client's real clinic photos
+  -->
+
+  <div class="announcement">
+    <div class="container announcement-inner">
+      New patients are welcome · Message us to check the next available appointment
+    </div>
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="#home" aria-label="Maison Smile Dental home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M8.5 3.5c1.2 0 2.2.6 3.5.6s2.3-.6 3.5-.6c2.8 0 4.5 2.2 4.5 5 0 4-2.5 11.5-5 11.5-1.8 0-1.6-4.2-3-4.2s-1.2 4.2-3 4.2c-2.5 0-5-7.5-5-11.5 0-2.8 1.7-5 4.5-5Z" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+        </span>
+
+        <span>
+          <span class="brand-name">Maison Smile</span>
+          <span class="brand-subtitle">Boutique Dental Care</span>
+        </span>
+      </a>
+
+      <nav id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#treatments">Treatments</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a
+        class="btn btn-primary desktop-book"
+        href="https://wa.me/60123456789?text=Hello%20Maison%20Smile%2C%20I%20would%20like%20to%20book%20an%20appointment."
+      >
+        Book a Visit
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Thoughtful family dentistry</div>
+
+          <h1>A gentler way to care for your smile.</h1>
+
+          <p>
+            Personal dental care in a calm, beautifully considered clinic.
+            Clear explanations, gentle treatment and a more comfortable
+            experience for every member of the family.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/60123456789?text=Hello%20Maison%20Smile%2C%20I%20would%20like%20to%20book%20an%20appointment."
+            >
+              Book Through WhatsApp
+            </a>
+
+            <a class="btn btn-outline" href="#treatments">
+              View Our Treatments
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="avatar-stack" aria-hidden="true">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="">
+            </div>
+
+            <div>
+              <strong>Trusted by local families</strong>
+              <span>Friendly care with a 4.9 patient rating</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-gallery">
+          <img
+            class="photo-main"
+            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85"
+            alt="Friendly dentist consulting with a patient"
+          />
+
+          <img
+            class="photo-small"
+            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=85"
+            alt="Bright modern dental clinic interior"
+          />
+
+          <div class="floating-badge">
+            <div>
+              <b>10+</b>
+              Years of gentle care
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <strong>Comfort comes first.</strong>
+            <span>
+              We explain each step clearly before treatment begins.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="container values-grid">
+        <div class="value-item">
+          <span class="value-number">01</span>
+          <strong>Clear recommendations</strong>
+          <p>No confusing explanations or unnecessary pressure.</p>
+        </div>
+
+        <div class="value-item">
+          <span class="value-number">02</span>
+          <strong>Gentle treatment</strong>
+          <p>Comfort-focused care for adults, children and nervous patients.</p>
+        </div>
+
+        <div class="value-item">
+          <span class="value-number">03</span>
+          <strong>Simple booking</strong>
+          <p>Contact the clinic directly through WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="treatments">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Everyday care and confident smile treatments.</h2>
+
+          <p>
+            Explore our most requested services. Click any treatment to open
+            additional details, benefits and a direct WhatsApp enquiry button.
+          </p>
+        </div>
+
+        <div class="treatment-grid">
+          <button class="treatment-featured" data-service="family">
+            <img
+              src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=85"
+              alt="Family receiving professional dental care"
+            />
+
+            <div class="featured-content">
+              <small>Featured care</small>
+              <h3>Family Dentistry</h3>
+              <p>
+                Preventive and general dental care for children, adults and
+                seniors in one comfortable clinic.
+              </p>
+            </div>
+          </button>
+
+          <div class="treatment-list">
+            <button class="treatment-card" data-service="checkup">
+              <div class="card-top">
+                <span class="card-icon">01</span>
+                <span class="card-arrow">↗</span>
+              </div>
+              <h3>Dental Check-Up</h3>
+              <p>Routine examination and personalised oral health guidance.</p>
+            </button>
+
+            <button class="treatment-card" data-service="cleaning">
+              <div class="card-top">
+                <span class="card-icon">02</span>
+                <span class="card-arrow">↗</span>
+              </div>
+              <h3>Scaling & Polishing</h3>
+              <p>Professional cleaning for fresher breath and healthier gums.</p>
+            </button>
+
+            <button class="treatment-card" data-service="whitening">
+              <div class="card-top">
+                <span class="card-icon">03</span>
+                <span class="card-arrow">↗</span>
+              </div>
+              <h3>Teeth Whitening</h3>
+              <p>Supervised whitening for a naturally brighter smile.</p>
+            </button>
+
+            <button class="treatment-card" data-service="fillings">
+              <div class="card-top">
+                <span class="card-icon">04</span>
+                <span class="card-arrow">↗</span>
+              </div>
+              <h3>Dental Fillings</h3>
+              <p>Natural-looking restoration for damaged or decayed teeth.</p>
+            </button>
+
+            <button class="treatment-card" data-service="braces">
+              <div class="card-top">
+                <span class="card-icon">05</span>
+                <span class="card-arrow">↗</span>
+              </div>
+              <h3>Braces Consultation</h3>
+              <p>Personalised assessment for suitable straightening options.</p>
+            </button>
+
+            <button class="treatment-card" data-service="rootcanal">
+              <div class="card-top">
+                <span class="card-icon">06</span>
+                <span class="card-arrow">↗</span>
+              </div>
+              <h3>Root Canal Treatment</h3>
+              <p>Careful treatment designed to relieve pain and preserve teeth.</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey" id="experience">
+      <div class="container journey-grid">
+        <div class="journey-copy">
+          <div class="eyebrow" style="color:#efd5c5;">Your clinic journey</div>
+
+          <h2>A simple process from first message to treatment.</h2>
+
+          <p>
+            The Essential package keeps everything on one page while still
+            showing patients exactly what to expect before booking.
+          </p>
+
+          <div class="journey-steps">
+            <div class="journey-step">
+              <span>1</span>
+              <div>
+                <strong>Message the clinic</strong>
+                <p>Ask about a treatment or request an available appointment.</p>
+              </div>
+            </div>
+
+            <div class="journey-step">
+              <span>2</span>
+              <div>
+                <strong>Attend your consultation</strong>
+                <p>The dentist reviews your concerns and explains suitable options.</p>
+              </div>
+            </div>
+
+            <div class="journey-step">
+              <span>3</span>
+              <div>
+                <strong>Choose your next step</strong>
+                <p>Proceed only after understanding the recommendation clearly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-image-wrap">
+          <img
+            class="journey-image"
+            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=85"
+            alt="Dental professional speaking with a patient"
+          />
+
+          <div class="journey-quote">
+            <p>“A calm visit begins with feeling informed.”</p>
+            <span>Maison Smile patient-care philosophy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Visit the clinic or start with a simple message.</h2>
+
+          <p>
+            Replace the sample information below with the clinic’s real contact
+            details, opening hours and exact Google Maps location.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Maison Smile Dental</h3>
+            <p>
+              Contact our team for appointment availability, treatment enquiries
+              or clinic directions.
+            </p>
+
+            <div class="info-list">
+              <div class="info-row">
+                <strong>Phone</strong>
+                <a href="tel:+60123456789">+60 12-345 6789</a>
+              </div>
+
+              <div class="info-row">
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/60123456789">Chat with Maison Smile</a>
+              </div>
+
+              <div class="info-row">
+                <strong>Email</strong>
+                <a href="mailto:hello@maisonsmile.com">hello@maisonsmile.com</a>
+              </div>
+
+              <div class="info-row">
+                <strong>Address</strong>
+                <span>12, Jalan Example, Kuala Lumpur, Malaysia</span>
+              </div>
+            </div>
+
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/60123456789?text=Hello%20Maison%20Smile%2C%20I%20would%20like%20to%20book%20an%20appointment."
+            >
+              Book Through WhatsApp
+            </a>
+
+            <div class="hours">
+              <div class="hours-row">
+                <span>Monday – Friday</span>
+                <strong>9:00 AM – 6:00 PM</strong>
+              </div>
+
+              <div class="hours-row">
+                <span>Saturday</span>
+                <strong>9:00 AM – 2:00 PM</strong>
+              </div>
+
+              <div class="hours-row">
+                <span>Sunday</span>
+                <strong>Closed</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-card">
+            <iframe
+              src="https://www.google.com/maps?q=Kuala%20Lumpur&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Maison Smile Dental location"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>Your next dental visit can feel easier.</h2>
+          <p>
+            Start with a simple WhatsApp conversation and let the clinic guide
+            you toward a suitable appointment.
+          </p>
+        </div>
+
+        <a
+          class="btn"
+          href="https://wa.me/60123456789?text=Hello%20Maison%20Smile%2C%20I%20would%20like%20to%20book%20an%20appointment."
+        >
+          Start a WhatsApp Chat
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Maison Smile Dental</span>
+      <span>Essential one-page dental website</span>
+    </div>
+  </footer>
+
+  <a
+    class="floating-wa"
+    href="https://wa.me/60123456789"
+    aria-label="Chat with Maison Smile on WhatsApp"
+  >
+    ✆
+  </a>
+
+  <div class="modal" id="serviceModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <img class="modal-image" id="modalImage" src="" alt="" />
+
+      <div class="modal-content">
+        <button class="close-modal" id="closeModal" aria-label="Close treatment details">
+          ×
+        </button>
+
+        <div class="modal-kicker">Treatment information</div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalText"></p>
+        <ul class="modal-list" id="modalList"></ul>
+
+        <a class="btn btn-primary" id="modalCta" href="#">
+          Ask About This Treatment
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener("error", function (event) {
+      const img = event.target;
+      if (img.tagName === "IMG" && !img.dataset.fallbackApplied) {
+        img.dataset.fallbackApplied = "true";
+        img.src = "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1200&q=85";
+      }
+    }, true);
+  </script>
+
+  <script>
+    const treatments = {
+      family: {
+        title: "Family Dentistry",
+        text: "General and preventive dental care for patients of different ages, with recommendations tailored to each member of the family.",
+        benefits: [
+          "Children and adult dental check-ups",
+          "Preventive care and oral-health guidance",
+          "Convenient care for the whole family"
+        ],
+        image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1000&q=85"
+      },
+      checkup: {
+        title: "Dental Check-Up",
+        text: "A routine examination helps the dentist assess your teeth, gums and overall oral health before smaller concerns become more serious.",
+        benefits: [
+          "General oral-health assessment",
+          "Personalised preventive advice",
+          "Clear recommendations when treatment is needed"
+        ],
+        image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1000&q=85"
+      },
+      cleaning: {
+        title: "Scaling & Polishing",
+        text: "Professional cleaning removes plaque, tartar and surface stains that may remain even with regular brushing and flossing.",
+        benefits: [
+          "Supports healthier gums",
+          "Helps freshen breath",
+          "Leaves teeth feeling cleaner and smoother"
+        ],
+        image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"
+      },
+      whitening: {
+        title: "Teeth Whitening",
+        text: "Dentist-supervised whitening can help brighten the natural shade of your teeth in a controlled and professional setting.",
+        benefits: [
+          "Professional dental supervision",
+          "A more even whitening result",
+          "Treatment planned around your smile goals"
+        ],
+        image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=85"
+      },
+      fillings: {
+        title: "Dental Fillings",
+        text: "Fillings restore teeth affected by decay, wear or minor damage using durable materials selected for the affected tooth.",
+        benefits: [
+          "Restores damaged tooth structure",
+          "Helps prevent further deterioration",
+          "Natural-looking materials may be available"
+        ],
+        image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85"
+      },
+      braces: {
+        title: "Braces Consultation",
+        text: "A consultation allows the dentist to assess tooth alignment, bite and suitable teeth-straightening options.",
+        benefits: [
+          "Personalised alignment assessment",
+          "Available treatment options explained",
+          "Expected treatment journey discussed clearly"
+        ],
+        image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85"
+      },
+      rootcanal: {
+        title: "Root Canal Treatment",
+        text: "Root canal treatment may help preserve a tooth when the inner tissue becomes inflamed or infected.",
+        benefits: [
+          "Aims to relieve dental discomfort",
+          "Helps preserve the natural tooth",
+          "Restores normal tooth function"
+        ],
+        image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"
+      }
+    };
+
+    const modal = document.getElementById("serviceModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalText = document.getElementById("modalText");
+    const modalList = document.getElementById("modalList");
+    const modalImage = document.getElementById("modalImage");
+    const modalCta = document.getElementById("modalCta");
+
+    document.querySelectorAll("[data-service]").forEach((card) => {
+      card.addEventListener("click", () => {
+        const item = treatments[card.dataset.service];
+
+        modalTitle.textContent = item.title;
+        modalText.textContent = item.text;
+        modalList.innerHTML = item.benefits
+          .map((benefit) => `<li>${benefit}</li>`)
+          .join("");
+
+        modalImage.src = item.image;
+        modalImage.alt = item.title;
+
+        modalCta.href =
+          "https://wa.me/60123456789?text=" +
+          encodeURIComponent(
+            "Hello Maison Smile, I would like to ask about " +
+            item.title +
+            "."
+          );
+
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("locked");
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("locked");
+    }
+
+    document.getElementById("closeModal").addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    });
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mainNav = document.getElementById("mainNav");
+
+    menuBtn.addEventListener("click", () => {
+      mainNav.classList.toggle("open");
+    });
+
+    mainNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("open");
+      });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
