@@ -1,304 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORALIS MINT // Next-Gen Advanced Restorative & Digital Smile Aesthetics</title>
-    
-    <!-- Premium UI Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Clinical Location Metadata -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Dentist",
-      "name": "ORALIS MINT Premium Dental Care",
-      "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200",
-      "priceRange": "MYR$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Level 3, North Block, Pavilion Tower, Bukit Bintang",
-        "addressLocality": "Kuala Lumpur",
-        "addressRegion": "WPKL",
-        "postalCode": "55100",
-        "addressCountry": "MY"
-      }
-    }
-    </script>
-
-    <style>
-        :root {
-            --bg-base: #080b11;
-            --glass-card: rgba(18, 24, 38, 0.6);
-            --glass-border: rgba(45, 212, 191, 0.15);
-            --neon-teal: #2dd4bf;
-            --neon-blue: #38bdf8;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --wa-brand: #25D366;
-            --font-display: 'Space Grotesk', sans-serif;
-            --font-main: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            background-color: var(--bg-base);
-            color: var(--text-primary);
-            font-family: var(--font-main);
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 80% 10%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 15% 75%, rgba(45, 212, 191, 0.06) 0%, transparent 50%);
-            background-attachment: fixed;
-        }
-
-        .ambient-glow { position: absolute; width: 450px; height: 450px; background: radial-gradient(circle, rgba(45, 212, 191, 0.1) 0%, transparent 70%); top: -50px; left: -100px; pointer-events: none; z-index: 0; }
-
-        .wrapper { max-width: 1300px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 10; }
-
-        /* Navigation Module */
-        nav {
-            position: sticky; top: 16px; z-index: 1000;
-            background: var(--glass-card);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 18px 32px;
-            margin-top: 16px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-        }
-        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; background: linear-gradient(90deg, #fff, var(--neon-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; letter-spacing: 2px; }
-        
-        .status-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(45, 212, 191, 0.08); border: 1px solid rgba(45, 212, 191, 0.25); padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-family: var(--font-display); text-transform: uppercase; color: var(--neon-teal); letter-spacing: 1px; }
-        .status-dot { width: 6px; height: 6px; background: var(--neon-teal); border-radius: 50%; box-shadow: 0 0 10px var(--neon-teal); animation: blink 2.5s infinite ease-in-out; }
-        @keyframes blink { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
-
-        /* Hero Graphic Display Section */
-        .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; padding: 80px 0; align-items: center; }
-        .hero-content h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.5rem, 4.5vw, 4.2rem); line-height: 1.1; margin: 20px 0; }
-        .hero-content h1 span { background: linear-gradient(90deg, var(--neon-teal), var(--neon-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-content p { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 36px; max-width: 580px; }
-
-        .ui-graphic-frame { position: relative; }
-        .ui-graphic-frame::before { content: ''; position: absolute; width: 100%; height: 100%; border: 1px solid var(--neon-teal); opacity: 0.2; top: 16px; left: 16px; border-radius: 28px; pointer-events: none; }
-        .hero-image { width: 100%; height: 480px; object-fit: cover; border-radius: 24px; border: 1px solid rgba(255,255,255,0.08); position: relative; z-index: 2; }
-
-        /* Premium Clinical Database Section */
-        .database-section { padding: 40px 0 80px 0; }
-        .sub-tag { font-family: var(--font-display); text-transform: uppercase; color: var(--neon-blue); letter-spacing: 3px; font-size: 0.85rem; margin-bottom: 12px; display: block; }
-        .main-title { font-family: var(--font-display); font-weight: 700; font-size: 2.2rem; margin-bottom: 48px; }
-
-        .treatment-matrix { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 24px; }
-        .matrix-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 24px; background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); border-radius: 16px; transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); }
-        .matrix-row:hover { background: rgba(45, 212, 191, 0.05); border-color: rgba(45, 212, 191, 0.3); transform: translateY(-3px); }
-        .matrix-info h4 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 6px; color: #fff; }
-        .matrix-info p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; max-width: 290px; }
-        .matrix-cost { font-family: var(--font-display); font-size: 1.25rem; color: var(--neon-teal); font-weight: 700; }
-
-        /* Interactive Calculation Form Module */
-        .terminal-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
-        .glass-terminal-card { background: var(--glass-card); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); border-radius: 24px; padding: 36px; box-shadow: 0 40px 80px rgba(0,0,0,0.4); }
-        
-        .field-wrap { margin-bottom: 24px; }
-        .field-wrap label { display: block; font-family: var(--font-display); font-size: 0.75rem; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 8px; letter-spacing: 1px; }
-        .input-element, .select-element { width: 100%; background: rgba(5, 7, 12, 0.6); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 14px 18px; font-family: inherit; color: #fff; font-size: 0.95rem; outline: none; transition: all 0.3s; }
-        .input-element:focus, .select-element:focus { border-color: var(--neon-teal); box-shadow: 0 0 12px rgba(45, 212, 191, 0.2); }
-
-        /* Realtime Digital Invoice Summary Ledger */
-        .ledger-box { background: rgba(5, 7, 12, 0.5); border: 1px dashed rgba(255,255,255,0.1); border-radius: 16px; padding: 24px; margin-bottom: 28px; }
-        .ledger-line { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9rem; color: var(--text-secondary); }
-        .ledger-line.total-line { margin-bottom: 0; padding-top: 14px; border-top: 1px dashed rgba(255,255,255,0.1); font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--neon-teal); }
-
-        .btn-action-relay { width: 100%; background: linear-gradient(90deg, var(--neon-teal), var(--neon-blue)); color: #080b11; border: none; padding: 18px; border-radius: 12px; font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 10px; transition: all 0.3s; }
-        .btn-action-relay:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(45, 212, 191, 0.3); filter: brightness(1.05); }
-
-        footer { margin-top: 80px; padding: 32px 0; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; color: var(--text-secondary); font-size: 0.8rem; letter-spacing: 0.5px; }
-
-        @media(max-width: 992px) {
-            .hero-grid, .terminal-grid { grid-template-columns: 1fr; }
-            .hero-image { height: 320px; }
-            .treatment-matrix { grid-template-columns: 1fr; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FORM / DENTAL | Precision Dentistry</title>
+<meta name="description" content="FORM / DENTAL provides precision-led cosmetic, restorative and implant dentistry in Kuala Lumpur.">
+<meta name="theme-color" content="#111111">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--black:#111;--white:#fff;--off:#f1f1ed;--gray:#d5d5d0;--muted:#696969;--red:#f13b2e;--shadow:0 28px 70px rgba(0,0,0,.18)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:var(--off);color:var(--black);line-height:1.55;overflow-x:hidden}
+body.lock{overflow:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%}
+button,input,select,textarea{font:inherit}
+.container{width:min(1280px,94%);margin:auto}
+header{position:sticky;top:0;z-index:1000;background:var(--off);border-bottom:2px solid var(--black)}
+.nav{min-height:76px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:25px}
+.brand{font-family:"Archivo Black",sans-serif;font-size:21px;letter-spacing:-1px}
+.brand span{color:var(--red)}
+.menu{display:flex;gap:26px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.menu a{padding:28px 0}.menu a.active{color:var(--red)}
+.actions{justify-self:end;display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border:2px solid var(--black);background:transparent;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1px;transition:.2s}
+.btn:hover{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-black{background:var(--black);color:#fff}
+.menu-btn{display:none;width:44px;height:44px;border:2px solid var(--black);background:transparent;font-size:21px}
+.page{display:none}.page.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.hero{border-bottom:2px solid var(--black)}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;min-height:720px}
+.hero-copy{padding:70px 48px 52px 0;display:flex;flex-direction:column;justify-content:space-between}
+.kicker{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1.7px;color:var(--red)}
+.hero h1{font-family:"Archivo Black",sans-serif;font-size:clamp(64px,9vw,128px);line-height:.82;letter-spacing:-7px;text-transform:uppercase;margin:28px 0}
+.hero p{font-size:18px;color:var(--muted);max-width:620px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.hero-meta{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--black)}
+.hero-meta div{padding:18px 18px 0 0;border-right:2px solid var(--black)}
+.hero-meta div:last-child{border-right:0;padding-left:18px}.hero-meta div:nth-child(2){padding-left:18px}
+.hero-meta strong{display:block;font-family:"Archivo Black",sans-serif;font-size:24px}.hero-meta span{font-size:11px;text-transform:uppercase;color:var(--muted)}
+.hero-image{position:relative;border-left:2px solid var(--black);overflow:hidden;background:#ddd}
+.hero-image img{height:100%;min-height:720px;object-fit:cover;filter:grayscale(100%) contrast(1.08)}
+.hero-image:after{content:"FORM / 01";position:absolute;right:18px;top:18px;background:var(--red);color:#fff;padding:10px 12px;font-size:11px;font-weight:900}
+.marquee{overflow:hidden;background:var(--black);color:#fff;padding:12px 0}
+.marquee-track{display:flex;gap:38px;width:max-content;animation:move 20s linear infinite;font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:14px}
+@keyframes move{to{transform:translateX(-50%)}}
+.section{padding:94px 0;border-bottom:2px solid var(--black)}
+.section-head{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;align-items:start;margin-bottom:45px}
+.section-head h2{font-family:"Archivo Black",sans-serif;font-size:clamp(44px,6vw,78px);line-height:.9;letter-spacing:-3px;text-transform:uppercase}
+.section-head p{font-size:17px;color:var(--muted);max-width:640px}
+.index-grid{display:grid;grid-template-columns:repeat(4,1fr);border:2px solid var(--black)}
+.index-card{padding:28px;border-right:2px solid var(--black);min-height:220px;background:#fff}
+.index-card:last-child{border-right:0}
+.index-card b{font-family:"Archivo Black",sans-serif;font-size:36px;color:var(--red)}
+.index-card strong{display:block;margin:18px 0 8px;text-transform:uppercase}.index-card p{font-size:13px;color:var(--muted)}
+.services{background:var(--black);color:#fff}
+.services .section-head p{color:#aaa}
+.service-list{border-top:1px solid #555}
+.service-row{width:100%;display:grid;grid-template-columns:90px 1fr auto;align-items:center;gap:22px;padding:23px 0;border:0;border-bottom:1px solid #555;background:transparent;color:#fff;text-align:left;cursor:pointer;transition:.2s}
+.service-row:hover{padding-left:16px;background:linear-gradient(90deg,rgba(241,59,46,.25),transparent)}
+.service-row span{color:var(--red);font-family:"Archivo Black",sans-serif;font-size:26px}
+.service-row h3{font-family:"Archivo Black",sans-serif;font-size:clamp(26px,3vw,43px);text-transform:uppercase;letter-spacing:-1.5px}
+.service-row p{font-size:12px;color:#aaa}.service-row b{font-size:30px}
+.split{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--black)}
+.split-img{min-height:650px;overflow:hidden}.split-img img{height:100%;min-height:650px;object-fit:cover;filter:grayscale(100%)}
+.split-copy{padding:48px;background:#fff;display:flex;flex-direction:column;justify-content:space-between}
+.split-copy h2{font-family:"Archivo Black",sans-serif;font-size:clamp(42px,5vw,70px);line-height:.9;text-transform:uppercase}
+.split-copy p{color:var(--muted);margin-top:18px}
+.steps{margin-top:30px;border-top:2px solid var(--black)}
+.step{display:grid;grid-template-columns:55px 1fr;gap:14px;padding:17px 0;border-bottom:2px solid var(--black)}.step b{font-family:"Archivo Black",sans-serif;color:var(--red)}.step strong{display:block;text-transform:uppercase}.step p{font-size:12px;margin:0}
+.banner{padding:80px 0;border-bottom:2px solid var(--black)}
+.banner h1{font-family:"Archivo Black",sans-serif;font-size:clamp(58px,9vw,118px);line-height:.82;letter-spacing:-6px;text-transform:uppercase}
+.banner p{max-width:700px;color:var(--muted);font-size:18px;margin-top:22px}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:0;border:2px solid var(--black)}
+.gallery figure{min-height:560px;border-right:2px solid var(--black);position:relative;overflow:hidden}.gallery figure:last-child{border-right:0}
+.gallery img{height:100%;min-height:560px;object-fit:cover;filter:grayscale(100%)}
+.gallery figcaption{position:absolute;left:0;bottom:0;background:var(--red);color:#fff;padding:10px 13px;font-size:11px;font-weight:900;text-transform:uppercase}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--black)}
+.team{background:#fff;border-right:2px solid var(--black)}.team:last-child{border-right:0}
+.team img{height:430px;object-fit:cover;object-position:center top;filter:grayscale(100%)}
+.team-copy{padding:22px}.team h3{font-family:"Archivo Black",sans-serif;font-size:24px;text-transform:uppercase}.team p{color:var(--red);font-size:12px;font-weight:900;text-transform:uppercase;margin:7px 0}.team span{color:var(--muted);font-size:13px}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--black)}
+.review{padding:28px;border-right:2px solid var(--black);background:#fff}.review:last-child{border-right:0}
+.review .stars{color:var(--red);letter-spacing:3px}.review p{font-size:21px;font-weight:600;margin:15px 0 22px}.review strong{font-size:11px;text-transform:uppercase}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;border:2px solid var(--black)}
+.contact-card{padding:34px;background:var(--black);color:#fff}.contact-card h2,.form-card h2{font-family:"Archivo Black",sans-serif;font-size:42px;text-transform:uppercase;line-height:.95}.contact-card>p{color:#aaa;margin:14px 0 22px}
+.contact-item{padding:15px 0;border-top:1px solid #555}.contact-item strong{display:block;color:var(--red);font-size:10px;text-transform:uppercase;letter-spacing:1px}
+.form-card{padding:34px;background:#fff}.form-card>p{color:var(--muted);margin:14px 0 22px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}
+.field label{font-size:11px;font-weight:900;text-transform:uppercase}.field input,.field select,.field textarea{width:100%;padding:13px;border:2px solid var(--black);outline:none;background:#fff}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--red)}
+.success{display:none;margin-top:14px;background:var(--red);color:#fff;padding:12px;font-weight:800;font-size:12px}
+.faq{margin-top:20px;border:2px solid var(--black)}.faq-item{background:#fff;border-bottom:2px solid var(--black)}.faq-item:last-child{border-bottom:0}.faq-q{width:100%;padding:16px;border:0;background:transparent;display:flex;justify-content:space-between;text-align:left;font-weight:900;text-transform:uppercase;cursor:pointer}.faq-a{max-height:0;overflow:hidden;color:var(--muted);transition:max-height .3s}.faq-a p{padding:0 16px 16px}.faq-item.active .faq-a{max-height:160px}
+.map{height:430px;border:2px solid var(--black);border-top:0}.map iframe{width:100%;height:100%;border:0;filter:grayscale(100%)}
+footer{background:var(--black);color:#fff;padding:50px 0 24px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:38px}.footer-grid p,.footer-grid a{color:#aaa}.footer-grid a{display:block;margin:8px 0}.footer-grid h3{font-family:"Archivo Black",sans-serif;font-size:14px;text-transform:uppercase}.footer-bottom{padding-top:20px;border-top:1px solid #444;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#777;font-size:11px}
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:900;width:58px;height:58px;display:grid;place-items:center;background:#25d366;color:#fff;border:2px solid var(--black);font-size:24px}
+.modal{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.82)}.modal.open{display:flex}
+.modal-card{width:min(980px,100%);max-height:90vh;display:grid;grid-template-columns:1fr 1fr;background:#fff;border:4px solid var(--red);overflow:hidden}.modal-img{height:100%;min-height:560px;object-fit:cover;filter:grayscale(100%)}.modal-content{position:relative;padding:36px;overflow:auto}.modal-content h3{font-family:"Archivo Black",sans-serif;font-size:42px;text-transform:uppercase;line-height:.95;margin:12px 0}.modal-content p{color:var(--muted)}.modal-list{margin:20px 0 24px 20px;display:grid;gap:9px}.close{position:absolute;right:16px;top:16px;width:42px;height:42px;background:var(--red);color:#fff;border:0;font-size:22px;cursor:pointer}
+@media(max-width:1000px){
+ .nav{grid-template-columns:1fr auto}.menu{position:absolute;top:76px;left:3%;right:3%;display:none;flex-direction:column;align-items:flex-start;background:#fff;border:2px solid var(--black);padding:18px}.menu.open{display:flex}.actions .btn{display:none}.menu-btn{display:block}
+ .hero-grid,.section-head,.split,.contact-grid{grid-template-columns:1fr}.hero-copy{padding:50px 0}.hero-image{border-left:0;border-top:2px solid var(--black)}.hero-image,.hero-image img{min-height:560px}
+ .index-grid{grid-template-columns:repeat(2,1fr)}.index-card:nth-child(2){border-right:0}.index-card:nth-child(-n+2){border-bottom:2px solid var(--black)}
+ .team-grid,.review-grid{grid-template-columns:repeat(2,1fr)}.team:nth-child(2),.review:nth-child(2){border-right:0}.team:nth-child(3),.review:nth-child(3){border-top:2px solid var(--black)}
+ .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+ .hero h1{font-size:64px;letter-spacing:-4px}.hero-meta{grid-template-columns:1fr}.hero-meta div{border-right:0;border-bottom:2px solid var(--black);padding:16px 0!important}.hero-meta div:last-child{border-bottom:0}
+ .section{padding:72px 0}.index-grid,.team-grid,.review-grid,.form-grid,.footer-grid{grid-template-columns:1fr}.index-card,.team,.review{border-right:0;border-bottom:2px solid var(--black)!important}.index-card:last-child,.team:last-child,.review:last-child{border-bottom:0!important}
+ .gallery{grid-template-columns:1fr}.gallery figure{border-right:0;border-bottom:2px solid var(--black);min-height:380px}.gallery img{min-height:380px}.gallery figure:last-child{border-bottom:0}
+ .service-row{grid-template-columns:55px 1fr auto;gap:12px}.service-row p{display:none}.field.full{grid-column:auto}
+ .modal-card{grid-template-columns:1fr}.modal-img{min-height:220px;height:230px}.modal-content{padding:28px}.modal-content h3{font-size:34px;padding-right:38px}
+}
+</style>
 </head>
 <body>
+<header><div class="container nav">
+  <a class="brand route" href="#/home" data-route="home">FORM <span>/</span> DENTAL</a>
+  <nav class="menu" id="menu">
+    <a class="route" href="#/home" data-route="home">Home</a>
+    <a class="route" href="#/services" data-route="services">Services</a>
+    <a class="route" href="#/studio" data-route="studio">Studio</a>
+    <a class="route" href="#/team" data-route="team">Team</a>
+    <a class="route" href="#/reviews" data-route="reviews">Reviews</a>
+    <a class="route" href="#/contact" data-route="contact">Contact</a>
+  </nav>
+  <div class="actions"><a class="btn btn-black route" href="#/contact" data-route="contact">Book Consultation</a><button class="menu-btn" id="menuBtn">☰</button></div>
+</div></header>
 
-    <div class="ambient-glow"></div>
-
-    <div class="wrapper">
-        <!-- APP HEADER BAR -->
-        <nav>
-            <div class="nav-flex">
-                <a href="#" class="nav-logo">ORALIS MINT</a>
-                <div class="status-pill">
-                    <span class="status-dot"></span> KKM Approved System
-                </div>
-            </div>
-        </nav>
-
-        <main>
-            <!-- MAIN HERO FRAME -->
-            <section class="hero-grid">
-                <div class="hero-content">
-                    <span class="status-pill" style="color:var(--neon-blue); border-color:rgba(56,189,248,0.2);">Digital Diagnostics</span>
-                    <h1>Advanced Dental <span>Architecture.</span></h1>
-                    <p>Experience precise, microscopic restorative oral architecture and digital smile styling workflows. Driven by AI diagnostic arrays and modern 3D panoramic imaging arrays right in Kuala Lumpur.</p>
-                    <a href="#configure" class="btn-action-relay" style="max-width: 260px; text-decoration: none;">Launch Treatment Configurator</a>
-                </div>
-                <div class="ui-graphic-frame">
-                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Advanced Clinical Dental Operations Space" class="hero-image">
-                </div>
-            </section>
-
-            <!-- TREATMENT MATRIX / TRACK DATA -->
-            <section class="database-section">
-                <span class="sub-tag">// Clinical Track Directory</span>
-                <h2 class="main-title">Transparent Standard Base Pricing Matrix</h2>
-                
-                <div class="treatment-matrix">
-                    <div class="matrix-row">
-                        <div class="matrix-info">
-                            <h4>Scaling, Polishing & Airflow</h4>
-                            <p>Premium 3-in-1 stain removal, surface whitening polish, and full deep gum pocket assessment.</p>
-                        </div>
-                        <span class="matrix-cost">RM 150</span>
-                    </div>
-                    <div class="matrix-row">
-                        <div class="matrix-info">
-                            <h4>Composite Aesthetic Filling</h4>
-                            <p>High-density, multi-layered biocompatible composite resin matched perfectly to your enamel tone.</p>
-                        </div>
-                        <span class="matrix-cost">RM 200</span>
-                    </div>
-                    <div class="matrix-row">
-                        <div class="matrix-info">
-                            <h4>Surgical Wisdom Tooth Extraction</h4>
-                            <p>Micro-incision clinical removal of impacted lower wisdom structures including minor suturing arrays.</p>
-                        </div>
-                        <span class="matrix-cost">RM 950</span>
-                    </div>
-                    <div class="matrix-row">
-                        <div class="matrix-info">
-                            <h4>Premium Zirconia Crown</h4>
-                            <p>Monolithic computer-milled metal-free biological structural replacement unit for broken crowns.</p>
-                        </div>
-                        <span class="matrix-cost">RM 1,500</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- COMPUTATION ENGINE FORM -->
-            <section class="database-section" id="configure" style="padding-top: 0;">
-                <span class="sub-tag">// Interactive Configuration Node</span>
-                <h2 class="main-title">Calculate and Lock Appointment Slot</h2>
-
-                <div class="glass-terminal-card terminal-grid">
-                    <div>
-                        <form id="dentEngineForm">
-                            <div class="field-wrap">
-                                <label for="paxName">Patient Profile Full Name</label>
-                                <input type="text" id="paxName" class="input-element" placeholder="e.g. Adrian Lim" required>
-                            </div>
-                            
-                            <div class="field-wrap">
-                                <label for="treatTrack">Select Target Care Module</label>
-                                <select id="treatTrack" class="select-element" required>
-                                    <option value="150">Routine Scaling, Polishing & Diagnostics (RM 150)</option>
-                                    <option value="200">Aesthetic Composite Structural Filling (RM 200)</option>
-                                    <option value="950">Micro-Surgical Wisdom Extraction Sequence (RM 950)</option>
-                                    <option value="1500">Premium Bio-Compat Zirconia Crown Unit (RM 1,500)</option>
-                                </select>
-                            </div>
-
-                            <div class="field-wrap">
-                                <label for="appTime">Preferred Matrix Allocation Window</label>
-                                <input type="datetime-local" id="appTime" class="input-element" required>
-                            </div>
-
-                            <button type="submit" class="btn-action-relay" style="background: linear-gradient(90deg, #25D366, #128C7E); color: #fff;"><i class="fab fa-whatsapp" style="font-size: 1.1rem;"></i> Dispatch Booking Matrix via WhatsApp</button>
-                        </form>
-                    </div>
-
-                    <!-- LEDGER COMPUTATION DISPLAY NODE -->
-                    <div style="display: flex; flex-direction: column; justify-content: center;">
-                        <div class="ledger-box">
-                            <h3 style="font-family: var(--font-display); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; color: #fff;"><i class="fas fa-receipt" style="color: var(--neon-teal); margin-right: 8px;"></i> Session Cost Diagnostics</h3>
-                            
-                            <div class="ledger-line">
-                                <span>Selected Procedure Track:</span>
-                                <span id="ledgerBase">RM 150.00</span>
-                            </div>
-                            <div class="ledger-line">
-                                <span>Disposable Kit & Sterilization:</span>
-                                <span>RM 20.00</span>
-                            </div>
-                            <div class="ledger-line">
-                                <span>SST / Service Fee (6%):</span>
-                                <span id="ledgerTax">RM 9.00</span>
-                            </div>
-                            <div class="ledger-line total-line">
-                                <span>Total Estimated Invoice:</span>
-                                <span id="ledgerTotal">RM 179.00</span>
-                            </div>
-                        </div>
-                        <p style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.5; text-align: justify;"><i class="fas fa-info-circle" style="color: var(--neon-blue); margin-right: 6px;"></i> System Guideline Note: Final clinical billing totals are structured upon direct intraoral visualization diagnostics. Tapping dispatch packages data fields cleanly into verified secure strings for rapid WhatsApp intake routing processing.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 ORALIS MINT Inc. Structured Healthcare Modules Engine. Kuala Lumpur, Malaysia. All Rights Reserved.</p>
-        </footer>
+<main>
+<section class="page active" id="page-home">
+  <section class="hero"><div class="container hero-grid">
+    <div class="hero-copy">
+      <div><div class="kicker">Precision dentistry / Kuala Lumpur</div><h1>Built for better smiles.</h1><p>Cosmetic, restorative and implant dentistry shaped by digital planning, clinical precision and clear communication.</p><div class="hero-actions"><a class="btn btn-black route" href="#/contact" data-route="contact">Book Consultation</a><a class="btn route" href="#/services" data-route="services">View Services</a></div></div>
+      <div class="hero-meta"><div><strong>4.9</strong><span>Patient rating</span></div><div><strong>15+</strong><span>Years experience</span></div><div><strong>24</strong><span>Clinical services</span></div></div>
     </div>
+    <div class="hero-image"><img src="https://images.pexels.com/photos/5998477/pexels-photo-5998477.jpeg?auto=compress&cs=tinysrgb&w=1500" alt="Dentist treating a patient"></div>
+  </div></section>
+  <div class="marquee"><div class="marquee-track"><span>Digital Smile Design /</span><span>Implant Dentistry /</span><span>Clear Aligners /</span><span>Restorative Care /</span><span>Family Dentistry /</span><span>Digital Smile Design /</span><span>Implant Dentistry /</span><span>Clear Aligners /</span><span>Restorative Care /</span><span>Family Dentistry /</span></div></div>
 
-    <!-- DYNAMIC CALCULATION CONTROL ENGINE -->
-    <script>
-        const treatSelect = document.getElementById('treatTrack');
-        
-        function computeLiveTolls() {
-            const chosenBase = parseFloat(treatSelect.value);
-            const standardDisposableFee = 20.00;
-            
-            const taxableGross = chosenBase + standardDisposableFee;
-            const sstValue = taxableGross * 0.06;
-            const absoluteInvoiceTotal = taxableGross + sstValue;
-            
-            document.getElementById('ledgerBase').innerText = `RM ${chosenBase.toFixed(2)}`;
-            document.getElementById('ledgerTax').innerText = `RM ${sstValue.toFixed(2)}`;
-            document.getElementById('ledgerTotal').innerText = `RM ${absoluteInvoiceTotal.toFixed(2)}`;
-        }
+  <section class="section"><div class="container">
+    <div class="section-head"><h2>Function. Form. Confidence.</h2><p>A disciplined, modern approach to dentistry with every stage explained clearly before treatment begins.</p></div>
+    <div class="index-grid">
+      <div class="index-card"><b>01</b><strong>Digital assessment</strong><p>Scans and imaging support accurate recommendations.</p></div>
+      <div class="index-card"><b>02</b><strong>Clear planning</strong><p>Understand options, timing and estimated fees.</p></div>
+      <div class="index-card"><b>03</b><strong>Precise treatment</strong><p>Modern workflows designed around comfort and predictability.</p></div>
+      <div class="index-card"><b>04</b><strong>Long-term care</strong><p>Practical follow-up and maintenance guidance.</p></div>
+    </div>
+  </section>
 
-        treatSelect.addEventListener('change', computeLiveTolls);
-        
-        // Boot execution context matrix load
-        computeLiveTolls();
+  <section class="section services"><div class="container">
+    <div class="section-head"><h2>Clinical services.</h2><p>Click any service to open additional information and a direct WhatsApp enquiry.</p></div>
+    <div class="service-list">
+      <button class="service-row" data-service="smile"><span>01</span><div><h3>Digital Smile Design</h3><p>Planning for shape, proportion and colour.</p></div><b>↗</b></button>
+      <button class="service-row" data-service="implants"><span>02</span><div><h3>Dental Implants</h3><p>Digitally planned replacement for missing teeth.</p></div><b>↗</b></button>
+      <button class="service-row" data-service="aligners"><span>03</span><div><h3>Clear Aligners</h3><p>Discreet orthodontic treatment for adults and teens.</p></div><b>↗</b></button>
+      <button class="service-row" data-service="veneers"><span>04</span><div><h3>Porcelain Veneers</h3><p>Custom ceramic restorations for selected concerns.</p></div><b>↗</b></button>
+      <button class="service-row" data-service="whitening"><span>05</span><div><h3>Professional Whitening</h3><p>Dentist-supervised whitening for brighter results.</p></div><b>↗</b></button>
+      <button class="service-row" data-service="family"><span>06</span><div><h3>Family Dentistry</h3><p>Preventive and general care for every age.</p></div><b>↗</b></button>
+    </div>
+  </div></section>
 
-        // Relay Array Assembly targeting the regional WhatsApp Engine
-        document.getElementById('dentEngineForm').addEventListener('submit', function(e){
-            e.preventDefault();
-            const clinicalReceptionLine = "60123456789"; // Swap custom clinic destination number array here
-            const patientName = document.getElementById('paxName').value;
-            const procedureText = treatSelect.options[treatSelect.selectedIndex].text;
-            const targetTime = document.getElementById('appTime').value;
-            
-            const localFormattedDate = new Date(targetTime).toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' });
-            const totalEstValue = document.getElementById('ledgerTotal').innerText;
+  <section class="section"><div class="container split">
+    <div class="split-img"><img src="https://images.pexels.com/photos/6502308/pexels-photo-6502308.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Modern dental consultation"></div>
+    <div class="split-copy"><div><h2>A process with no guesswork.</h2><p>Patients understand the next step before they commit to treatment.</p></div><div class="steps">
+      <div class="step"><b>01</b><div><strong>Consultation</strong><p>Discuss concerns, goals and previous dental experience.</p></div></div>
+      <div class="step"><b>02</b><div><strong>Assessment</strong><p>Clinical checks, scans and imaging where required.</p></div></div>
+      <div class="step"><b>03</b><div><strong>Plan</strong><p>Receive treatment options, timing and estimated pricing.</p></div></div>
+      <div class="step"><b>04</b><div><strong>Treatment</strong><p>Proceed with a clear understanding of the process.</p></div></div>
+    </div><a class="btn btn-black route" href="#/contact" data-route="contact">Start Consultation</a></div>
+  </div></section>
+</section>
 
-            const finalUrlText = `*🦷 ORALIS MINT CLINICAL BOOKING MATRIX*%0A%0A` +
-                                 `*Patient Name:* ${encodeURIComponent(patientName)}%0A` +
-                                 `*Care Profile:* ${encodeURIComponent(procedureText)}%0A` +
-                                 `*Allocated Timeline Window:* ${encodeURIComponent(localFormattedDate)}%0A` +
-                                 `*Estimated Session Gross:* ${encodeURIComponent(totalEstValue)}`;
-                                 
-            window.open(`https://wa.me/${clinicalReceptionLine}?text=${finalUrlText}`, '_blank');
-        });
-    </script>
+<section class="page" id="page-services">
+  <div class="banner"><div class="container"><div class="kicker">Service index</div><h1>Clinical services.</h1><p>General, cosmetic, orthodontic and restorative treatment in one contemporary clinic.</p></div></div>
+  <section class="section services"><div class="container service-list">
+    <button class="service-row" data-service="smile"><span>01</span><div><h3>Digital Smile Design</h3><p>Visual planning for selected cosmetic cases.</p></div><b>↗</b></button>
+    <button class="service-row" data-service="implants"><span>02</span><div><h3>Dental Implants</h3><p>Digitally planned tooth replacement.</p></div><b>↗</b></button>
+    <button class="service-row" data-service="aligners"><span>03</span><div><h3>Clear Aligners</h3><p>Discreet teeth straightening.</p></div><b>↗</b></button>
+    <button class="service-row" data-service="veneers"><span>04</span><div><h3>Porcelain Veneers</h3><p>Custom ceramic restorations.</p></div><b>↗</b></button>
+    <button class="service-row" data-service="whitening"><span>05</span><div><h3>Professional Whitening</h3><p>Supervised whitening treatment.</p></div><b>↗</b></button>
+    <button class="service-row" data-service="family"><span>06</span><div><h3>Family Dentistry</h3><p>Preventive and general care.</p></div><b>↗</b></button>
+  </div></section>
+</section>
+
+<section class="page" id="page-studio">
+  <div class="banner"><div class="container"><div class="kicker">The studio</div><h1>Space for precision.</h1><p>A contemporary clinic environment supported by digital imaging and careful treatment planning.</p></div></div>
+  <section class="section"><div class="container gallery">
+    <figure><img src="https://images.pexels.com/photos/3779705/pexels-photo-3779705.jpeg?auto=compress&cs=tinysrgb&w=1500" alt="Dental studio interior"><figcaption>Main Studio</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/305566/pexels-photo-305566.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Dental technology"><figcaption>Technology</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/4270365/pexels-photo-4270365.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Consultation area"><figcaption>Consultation</figcaption></figure>
+  </div></section>
+</section>
+
+<section class="page" id="page-team">
+  <div class="banner"><div class="container"><div class="kicker">Clinical team</div><h1>Expertise, clearly communicated.</h1><p>Experienced dentists with a direct, professional and reassuring approach.</p></div></div>
+  <section class="section"><div class="container team-grid">
+    <article class="team"><img src="https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Dr. Claire Lim"><div class="team-copy"><h3>Dr. Claire Lim</h3><p>Cosmetic & Restorative</p><span>Focused on smile design, veneers and natural restorations.</span></div></article>
+    <article class="team"><img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Dr. Ryan Ong"><div class="team-copy"><h3>Dr. Ryan Ong</h3><p>Implant Dentistry</p><span>Experienced in implants, crowns and complex restorative care.</span></div></article>
+    <article class="team"><img src="https://images.pexels.com/photos/5214961/pexels-photo-5214961.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Dr. Nina Aziz"><div class="team-copy"><h3>Dr. Nina Aziz</h3><p>Orthodontics</p><span>Focused on clear aligners, braces and bite correction.</span></div></article>
+  </div></section>
+</section>
+
+<section class="page" id="page-reviews">
+  <div class="banner"><div class="container"><div class="kicker">Patient feedback</div><h1>Measured by experience.</h1><p>Replace the sample testimonials below with verified patient reviews before launch.</p></div></div>
+  <section class="section"><div class="container review-grid">
+    <article class="review"><div class="stars">★★★★★</div><p>“Direct, professional and very clear from consultation to treatment.”</p><strong>Michelle K.</strong></article>
+    <article class="review"><div class="stars">★★★★★</div><p>“The digital scan made the implant plan much easier to understand.”</p><strong>Jonathan L.</strong></article>
+    <article class="review"><div class="stars">★★★★★</div><p>“Modern clinic, excellent communication and no unnecessary pressure.”</p><strong>Sara M.</strong></article>
+  </div></section>
+</section>
+
+<section class="page" id="page-contact">
+  <div class="banner"><div class="container"><div class="kicker">Contact / booking</div><h1>Start with a consultation.</h1><p>Contact the clinic directly or submit your preferred appointment details.</p></div></div>
+  <section class="section"><div class="container">
+    <div class="contact-grid">
+      <div><div class="contact-card"><h2>FORM / DENTAL</h2><p>Replace the sample information with the clinic’s real details.</p>
+        <div class="contact-item"><strong>Phone</strong><a href="tel:+60123456789">+60 12-345 6789</a></div>
+        <div class="contact-item"><strong>WhatsApp</strong><a href="https://wa.me/60123456789">Chat with the clinic</a></div>
+        <div class="contact-item"><strong>Email</strong><a href="mailto:hello@formdental.com">hello@formdental.com</a></div>
+        <div class="contact-item"><strong>Address</strong>31 Jalan Example, Kuala Lumpur, Malaysia</div>
+        <div class="contact-item"><strong>Hours</strong>Mon–Fri 9 AM–7 PM · Sat 9 AM–3 PM</div>
+      </div>
+      <div class="faq">
+        <div class="faq-item"><button class="faq-q">Do you accept new patients?<span>+</span></button><div class="faq-a"><p>Yes. New patients are welcome for general, cosmetic, orthodontic and implant consultations.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Can I book through WhatsApp?<span>+</span></button><div class="faq-a"><p>Yes. Contact the clinic through the WhatsApp button to check appointment availability.</p></div></div>
+      </div></div>
+      <div class="form-card"><h2>Appointment Request</h2><p>The clinic will contact you to confirm availability.</p>
+        <form id="bookingForm"><div class="form-grid">
+          <div class="field"><label for="name">Full Name</label><input id="name" required></div>
+          <div class="field"><label for="phone">Phone Number</label><input id="phone" type="tel" required></div>
+          <div class="field"><label for="service">Service</label><select id="service" required><option value="">Select service</option><option>General Consultation</option><option>Digital Smile Design</option><option>Dental Implants</option><option>Clear Aligners</option><option>Porcelain Veneers</option></select></div>
+          <div class="field"><label for="date">Preferred Date</label><input id="date" type="date" required></div>
+          <div class="field full"><label for="message">Message</label><textarea id="message" rows="5"></textarea></div>
+        </div><button class="btn btn-black" type="submit" style="width:100%;margin-top:16px">Send Appointment Request</button><div class="success" id="success">Thank you. Connect this demo form to the clinic’s email, CRM or booking platform.</div></form>
+      </div>
+    </div>
+    <div class="map"><iframe src="https://www.google.com/maps?q=Kuala%20Lumpur&output=embed" loading="lazy" title="FORM DENTAL location"></iframe></div>
+  </div></section>
+</section>
+</main>
+
+<footer><div class="container"><div class="footer-grid">
+  <div><a class="brand route" href="#/home" data-route="home" style="color:#fff">FORM <span>/</span> DENTAL</a><p style="margin-top:15px">Precision-led dentistry with clear communication and modern planning.</p></div>
+  <div><h3>Explore</h3><a class="route" href="#/studio" data-route="studio">Studio</a><a class="route" href="#/team" data-route="team">Team</a><a class="route" href="#/reviews" data-route="reviews">Reviews</a></div>
+  <div><h3>Services</h3><a class="route" href="#/services" data-route="services">Smile Design</a><a class="route" href="#/services" data-route="services">Implants</a><a class="route" href="#/services" data-route="services">Aligners</a></div>
+  <div><h3>Contact</h3><a href="tel:+60123456789">+60 12-345 6789</a><a href="mailto:hello@formdental.com">Email Clinic</a><a class="route" href="#/contact" data-route="contact">Book Consultation</a></div>
+</div><div class="footer-bottom"><span>© <span id="year"></span> FORM / DENTAL.</span><span>Privacy · Terms · Medical Disclaimer</span></div></div></footer>
+
+<a class="float-wa" href="https://wa.me/60123456789" aria-label="WhatsApp">✆</a>
+<div class="modal" id="modal"><div class="modal-card"><img class="modal-img" id="modalImg" src="" alt=""><div class="modal-content"><button class="close" id="close">×</button><div class="kicker">Service details</div><h3 id="modalTitle"></h3><p id="modalText"></p><ul class="modal-list" id="modalList"></ul><a class="btn btn-black" id="modalCta" href="#">Ask About This Service</a></div></div></div>
+
+<script>
+const routes=["home","services","studio","team","reviews","contact"];
+const pages=document.querySelectorAll(".page"),links=document.querySelectorAll(".route"),menu=document.getElementById("menu");
+function getRoute(){return location.hash.replace("#/","")||"home"}
+function show(r){if(!routes.includes(r))r="home";pages.forEach(p=>p.classList.toggle("active",p.id==="page-"+r));links.forEach(a=>a.classList.toggle("active",a.dataset.route===r));window.scrollTo({top:0,behavior:"instant"});menu.classList.remove("open")}
+window.addEventListener("hashchange",()=>show(getRoute()));show(getRoute());document.getElementById("menuBtn").onclick=()=>menu.classList.toggle("open");
+const data={
+smile:{title:"Digital Smile Design",text:"Digital planning can support selected cosmetic cases by helping visualise shape, proportion and colour before treatment begins.",list:["Photography and digital scans","Selected smile preview options","Improved treatment communication"],image:"https://images.pexels.com/photos/5355902/pexels-photo-5355902.jpeg?auto=compress&cs=tinysrgb&w=1200"},
+implants:{title:"Dental Implants",text:"Implants replace missing teeth using a carefully planned foundation and custom restoration.",list:["Restores appearance and function","Digital planning where suitable","Long-term maintenance guidance"],image:"https://images.pexels.com/photos/3845983/pexels-photo-3845983.jpeg?auto=compress&cs=tinysrgb&w=1200"},
+aligners:{title:"Clear Aligners",text:"Clear removable trays gradually reposition teeth according to a digitally planned sequence.",list:["Discreet removable treatment","Digital progress planning","Clinical suitability assessment"],image:"https://images.pexels.com/photos/6529113/pexels-photo-6529113.jpeg?auto=compress&cs=tinysrgb&w=1200"},
+veneers:{title:"Porcelain Veneers",text:"Custom ceramic veneers may improve selected concerns involving shape, colour or proportion.",list:["Custom ceramic design","Natural shade planning","Conservative assessment"],image:"https://images.pexels.com/photos/6627331/pexels-photo-6627331.jpeg?auto=compress&cs=tinysrgb&w=1200"},
+whitening:{title:"Professional Whitening",text:"Dentist-supervised whitening brightens the natural shade of teeth through a controlled treatment plan.",list:["Professional supervision","More even whitening","Maintenance guidance"],image:"https://images.pexels.com/photos/6627538/pexels-photo-6627538.jpeg?auto=compress&cs=tinysrgb&w=1200"},
+family:{title:"Family Dentistry",text:"Preventive and general care for children, adults and seniors.",list:["Routine examinations","Cleaning and fillings","Family-friendly scheduling"],image:"https://images.pexels.com/photos/4269688/pexels-photo-4269688.jpeg?auto=compress&cs=tinysrgb&w=1200"}
+};
+const modal=document.getElementById("modal");
+document.querySelectorAll("[data-service]").forEach(b=>b.onclick=()=>{const d=data[b.dataset.service];modalTitle.textContent=d.title;modalText.textContent=d.text;modalList.innerHTML=d.list.map(x=>`<li>${x}</li>`).join("");modalImg.src=d.image;modalImg.alt=d.title;modalCta.href="https://wa.me/60123456789?text="+encodeURIComponent("Hello FORM DENTAL, I would like to ask about "+d.title+".");modal.classList.add("open");document.body.classList.add("lock")});
+function closeM(){modal.classList.remove("open");document.body.classList.remove("lock")}
+document.getElementById("close").onclick=closeM;modal.onclick=e=>{if(e.target===modal)closeM()};document.addEventListener("keydown",e=>{if(e.key==="Escape")closeM()});
+document.querySelectorAll(".faq-q").forEach(b=>b.onclick=()=>{const i=b.parentElement;i.classList.toggle("active");b.querySelector("span").textContent=i.classList.contains("active")?"−":"+"});
+const date=document.getElementById("date");date.min=new Date().toISOString().split("T")[0];document.getElementById("bookingForm").onsubmit=e=>{e.preventDefault();success.style.display="block";e.target.reset()};document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
