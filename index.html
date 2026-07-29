@@ -1,1445 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Explore Essential and Signature website themes for dental clinics, orthodontic centres, specialist practices and oral care businesses."
-  >
-
-  <meta
-    name="keywords"
-    content="dental website design, dentist website, orthodontic clinic website, dental clinic landing page, oral care website, Plannique Design Co"
-  >
-
-  <meta name="author" content="Plannique Design Co">
-
-  <meta
-    property="og:title"
-    content="Dental Website Collection | Plannique Design Co"
-  >
-
-  <meta
-    property="og:description"
-    content="Explore one-page and multi-page website themes for dental clinics, orthodontic centres and oral care businesses."
-  >
-
-  <meta property="og:type" content="website">
-
-  <title>
-    Dental Website Collection | Plannique Design Co
-  </title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <style>
-    :root {
-      --paper: #f3efe8;
-      --paper-soft: #faf8f4;
-      --white: #ffffff;
-      --ink: #2b2824;
-      --muted: #746d65;
-      --sage: #75816f;
-      --sage-dark: #596352;
-      --line: #ddd3c7;
-      --header-height: 86px;
-      --shadow: 0 22px 65px rgba(58, 47, 38, 0.12);
-      --card-shadow: 0 14px 38px rgba(58, 47, 38, 0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: 100vh;
-      overflow-x: hidden;
-      font-family: "DM Sans", Arial, sans-serif;
-      color: var(--ink);
-      background: var(--paper-soft);
-      line-height: 1.6;
-    }
-
-    body.modal-open {
-      overflow: hidden;
-    }
-
-    button,
-    a {
-      font: inherit;
-    }
-
-    button {
-      cursor: pointer;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .wrap {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    /* ========================================
-       HEADER
-    ======================================== */
-
-    .navbar {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 1000;
-      height: var(--header-height);
-      background: rgba(243, 239, 232, 0.96);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-    }
-
-    .nav {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      border: 0;
-      background: transparent;
-      color: var(--ink);
-      text-align: left;
-    }
-
-    .brand-mark {
-      width: 46px;
-      height: 46px;
-      flex-shrink: 0;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      background: #f9f6f0;
-      color: var(--sage-dark);
-      font-family: "Playfair Display", serif;
-      font-size: 22px;
-      font-weight: 700;
-    }
-
-    .brand-copy strong {
-      display: block;
-      font-family: "Playfair Display", serif;
-      font-size: 19px;
-      line-height: 1;
-    }
-
-    .brand-copy span {
-      display: block;
-      margin-top: 5px;
-      color: var(--muted);
-      font-size: 8px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nav-link {
-      min-height: 42px;
-      padding: 0 17px;
-      border: 0;
-      border-radius: 999px;
-      background: transparent;
-      color: var(--ink);
-      font-size: 11px;
-      font-weight: 800;
-      transition:
-        color 0.2s ease,
-        background 0.2s ease;
-    }
-
-    .nav-link:hover {
-      background: rgba(117, 129, 111, 0.08);
-      color: var(--sage-dark);
-    }
-
-    .nav-link.active {
-      background: rgba(117, 129, 111, 0.11);
-      color: var(--sage-dark);
-    }
-
-    /* ========================================
-       MAIN CONTENT
-    ======================================== */
-
-    main {
-      padding-top: var(--header-height);
-    }
-
-    .collection-page {
-      display: none;
-      min-height: calc(100vh - var(--header-height));
-      animation: pageFade 0.35s ease;
-    }
-
-    .collection-page.active {
-      display: block;
-    }
-
-    @keyframes pageFade {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* ========================================
-       PACKAGE INTRODUCTION
-    ======================================== */
-
-    .package-intro {
-      position: relative;
-      overflow: hidden;
-      padding: 92px 0 72px;
-      border-bottom: 1px solid var(--line);
-      background:
-        radial-gradient(
-          circle at 84% 25%,
-          rgba(117, 129, 111, 0.13),
-          transparent 29%
-        ),
-        linear-gradient(
-          135deg,
-          var(--paper),
-          var(--paper-soft)
-        );
-    }
-
-    .package-intro::after {
-      content: "";
-      position: absolute;
-      top: -140px;
-      right: -100px;
-      width: 420px;
-      height: 420px;
-      border: 1px solid rgba(117, 129, 111, 0.1);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-
-    .intro-content {
-      position: relative;
-      z-index: 1;
-      max-width: 930px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 11px;
-      color: var(--sage-dark);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 29px;
-      height: 1px;
-      background: var(--sage);
-    }
-
-    .package-intro h1 {
-      max-width: 960px;
-      margin-top: 20px;
-      font-family: "Playfair Display", serif;
-      font-size: clamp(50px, 6.5vw, 82px);
-      font-weight: 600;
-      line-height: 0.99;
-      letter-spacing: -2px;
-    }
-
-    .package-intro p {
-      max-width: 760px;
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.7;
-    }
-
-    /* ========================================
-       THEME CARDS
-    ======================================== */
-
-    .theme-area {
-      padding: 68px 0 100px;
-      background: #ffffff;
-    }
-
-    .theme-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      align-items: start;
-    }
-
-    .theme-card {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: var(--white);
-      box-shadow: var(--card-shadow);
-      transition:
-        transform 0.28s ease,
-        box-shadow 0.28s ease;
-    }
-
-    .theme-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-    }
-
-    .theme-preview {
-      position: relative;
-      height: 260px;
-      overflow: hidden;
-      background: #ded6cc;
-    }
-
-    .theme-preview img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .theme-card:hover .theme-preview img {
-      transform: scale(1.045);
-    }
-
-    .theme-preview::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(29, 25, 21, 0.58),
-        transparent 57%
-      );
-      pointer-events: none;
-    }
-
-    .package-label,
-    .design-code,
-    .design-style {
-      position: absolute;
-      z-index: 2;
-    }
-
-    .package-label {
-      top: 14px;
-      left: 14px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.95);
-      color: var(--ink);
-      font-size: 8px;
-      font-weight: 900;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-    }
-
-    .design-code {
-      top: 14px;
-      right: 14px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(42, 39, 35, 0.9);
-      color: #ffffff;
-      font-size: 8px;
-      font-weight: 900;
-    }
-
-    .design-style {
-      left: 15px;
-      bottom: 14px;
-      color: #ffffff;
-      font-size: 10px;
-      font-weight: 800;
-    }
-
-    .theme-body {
-      padding: 22px;
-    }
-
-    .theme-body h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 29px;
-      font-weight: 600;
-      line-height: 1.08;
-    }
-
-    .theme-description {
-      min-height: 46px;
-      margin-top: 9px;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.6;
-    }
-
-    .theme-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 15px;
-    }
-
-    .theme-tags span {
-      padding: 6px 9px;
-      border-radius: 999px;
-      background: #f4f0ea;
-      color: #6d665e;
-      font-size: 9px;
-      font-weight: 800;
-    }
-
-    .package-box {
-      margin-top: 16px;
-      padding: 13px;
-      border: 1px solid #e7ddd2;
-      border-radius: 13px;
-      background: #fbf8f4;
-    }
-
-    .package-box strong {
-      display: block;
-      font-size: 12px;
-    }
-
-    .package-box span {
-      display: block;
-      margin-top: 2px;
-      color: var(--muted);
-      font-size: 10px;
-    }
-
-    .preview-button {
-      width: 100%;
-      min-height: 46px;
-      margin-top: 17px;
-      border: 0;
-      border-radius: 999px;
-      background: var(--ink);
-      color: #ffffff;
-      font-size: 10px;
-      font-weight: 900;
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-    }
-
-    .preview-button:hover {
-      transform: translateY(-2px);
-      background: var(--sage-dark);
-    }
-
-    /* ========================================
-       FOOTER
-    ======================================== */
-
-    footer {
-      padding: 30px 0;
-      border-top: 1px solid var(--line);
-      background: var(--paper);
-    }
-
-    .footer-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      color: var(--muted);
-      font-size: 10px;
-    }
-
-    .footer-name {
-      color: var(--ink);
-      font-family: "Playfair Display", serif;
-      font-size: 16px;
-    }
-
-    /* ========================================
-       FULL-SCREEN PREVIEW
-    ======================================== */
-
-    .preview-modal {
-      position: fixed;
-      inset: 0;
-      z-index: 5000;
-      display: none;
-      flex-direction: column;
-      background: #171512;
-    }
-
-    .preview-modal.open {
-      display: flex;
-    }
-
-    .preview-toolbar {
-      min-height: 68px;
-      padding: 10px 16px;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      gap: 14px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      background: #24211e;
-      color: #ffffff;
-    }
-
-    .back-collection-button {
-      min-height: 42px;
-      padding: 0 15px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      color: #ffffff;
-      font-size: 11px;
-      font-weight: 800;
-      transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-    }
-
-    .back-collection-button:hover {
-      transform: translateY(-1px);
-      background: rgba(255, 255, 255, 0.12);
-    }
-
-    .modal-information {
-      min-width: 0;
-      text-align: center;
-    }
-
-    .modal-information strong {
-      display: block;
-      overflow: hidden;
-      font-family: "Playfair Display", serif;
-      font-size: 19px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .modal-information span {
-      display: block;
-      margin-top: 2px;
-      color: #c4bbb2;
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .toolbar-spacer {
-      width: 140px;
-    }
-
-    .preview-stage {
-      flex: 1;
-      min-height: 0;
-      background: #ffffff;
-    }
-
-    .preview-frame {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      background: #ffffff;
-    }
-
-    /* ========================================
-       TABLET
-    ======================================== */
-
-    @media (max-width: 900px) {
-      .theme-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .package-intro {
-        padding: 75px 0 62px;
-      }
-
-      .toolbar-spacer {
-        width: 120px;
-      }
-    }
-
-    /* ========================================
-       MOBILE
-    ======================================== */
-
-    @media (max-width: 680px) {
-      :root {
-        --header-height: 74px;
-      }
-
-      .wrap {
-        width: min(100% - 28px, 1180px);
-      }
-
-      .brand-mark {
-        width: 40px;
-        height: 40px;
-        font-size: 19px;
-      }
-
-      .brand-copy strong {
-        font-size: 15px;
-      }
-
-      .brand-copy span {
-        display: none;
-      }
-
-      .nav-actions {
-        gap: 3px;
-      }
-
-      .nav-link {
-        min-height: 38px;
-        padding: 0 10px;
-        font-size: 9px;
-      }
-
-      .package-intro {
-        padding: 58px 0 50px;
-      }
-
-      .package-intro h1 {
-        margin-top: 17px;
-        font-size: clamp(43px, 13vw, 58px);
-        letter-spacing: -1.3px;
-      }
-
-      .package-intro p {
-        margin-top: 17px;
-        font-size: 14px;
-      }
-
-      .theme-area {
-        padding: 46px 0 70px;
-      }
-
-      .theme-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .theme-preview {
-        height: 245px;
-      }
-
-      .theme-description {
-        min-height: 0;
-      }
-
-      .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-      }
-
-      .preview-toolbar {
-        min-height: 78px;
-        grid-template-columns: auto 1fr;
-        padding: 10px 12px;
-      }
-
-      .modal-information {
-        min-width: 0;
-        text-align: right;
-      }
-
-      .modal-information strong {
-        font-size: 15px;
-      }
-
-      .toolbar-spacer {
-        display: none;
-      }
-
-      .back-collection-button {
-        min-height: 40px;
-        padding: 0 12px;
-        font-size: 9px;
-      }
-    }
-
-    @media (max-width: 420px) {
-      .brand-copy strong {
-        font-size: 14px;
-      }
-
-      .nav-link {
-        padding: 0 8px;
-        font-size: 8px;
-      }
-
-      .package-intro h1 {
-        font-size: 40px;
-      }
-
-      .theme-body {
-        padding: 19px;
-      }
-    }
-
-    button:focus-visible {
-      outline: 3px solid rgba(117, 129, 111, 0.38);
-      outline-offset: 3px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dental Showcases | Plannique Design Co</title>
+<meta name="description" content="Browse Essential and Signature dental website showcases by Plannique Design Co.">
+<meta name="theme-color" content="#f1ede6">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#f1ede6;
+  --soft:#faf8f4;
+  --white:#fff;
+  --ink:#2a2723;
+  --muted:#756e66;
+  --sage:#75816f;
+  --sage-dark:#596352;
+  --line:#ddd2c5;
+  --shadow:0 16px 42px rgba(56,45,34,.1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  font-family:"DM Sans",Arial,sans-serif;
+  color:var(--ink);
+  background:linear-gradient(180deg,var(--paper),var(--soft));
+  line-height:1.5;
+}
+body.modal-open{overflow:hidden}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+.wrap{width:min(760px,calc(100% - 28px));margin:auto}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(241,237,230,.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.mark{
+  width:40px;height:40px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  border:1px solid var(--line);
+  background:#f9f6f0;
+  color:var(--sage-dark);
+  font-family:"Playfair Display",serif;
+  font-weight:700;
+}
+.brand strong{
+  display:block;
+  font-family:"Playfair Display",serif;
+  font-size:16px;
+}
+.brand span{
+  display:block;
+  color:var(--muted);
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+.back{
+  padding:10px 13px;
+  border-radius:999px;
+  background:var(--ink);
+  color:#fff;
+  font-size:10px;
+  font-weight:800;
+}
+
+.hero{
+  padding:48px 0 30px;
+}
+.eyebrow{
+  color:var(--sage-dark);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+}
+.hero h1{
+  margin-top:10px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(38px,10vw,58px);
+  line-height:1.02;
+  font-weight:600;
+}
+.hero p{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.tabs{
+  position:sticky;
+  top:72px;
+  z-index:900;
+  padding:10px 0;
+  background:rgba(250,248,244,.95);
+  backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.tab-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.tab{
+  min-height:45px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  color:var(--ink);
+  font-size:12px;
+  font-weight:800;
+}
+.tab.active{
+  background:var(--sage-dark);
+  color:#fff;
+  border-color:var(--sage-dark);
+}
+
+.package{
+  display:none;
+  padding:24px 0 60px;
+}
+.package.active{display:block}
+.package-head{
+  margin-bottom:15px;
+}
+.package-head h2{
+  font-family:"Playfair Display",serif;
+  font-size:30px;
+}
+.package-head p{
+  color:var(--muted);
+  font-size:12px;
+  margin-top:4px;
+}
+.list{
+  display:grid;
+  gap:12px;
+}
+.item{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:13px;
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 9px 26px rgba(56,45,34,.06);
+}
+.number{
+  width:42px;height:42px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  background:#f4f0ea;
+  color:var(--sage-dark);
+  font-family:"Playfair Display",serif;
+  font-size:15px;
+  font-weight:700;
+}
+.item h3{
+  font-family:"Playfair Display",serif;
+  font-size:21px;
+  line-height:1.05;
+}
+.item small{
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+}
+.view{
+  min-height:40px;
+  padding:0 14px;
+  border:0;
+  border-radius:999px;
+  background:var(--ink);
+  color:#fff;
+  font-size:10px;
+  font-weight:900;
+}
+.note{
+  margin-top:18px;
+  padding:14px;
+  border-radius:14px;
+  background:rgba(117,129,111,.1);
+  color:var(--sage-dark);
+  font-size:11px;
+  font-weight:700;
+}
+
+footer{
+  padding:26px 0 35px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:10px;
+  text-align:center;
+}
+
+/* Modal */
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:5000;
+  display:none;
+  flex-direction:column;
+  background:#111;
+}
+.modal.open{display:flex}
+.bar{
+  min-height:64px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  align-items:center;
+  gap:10px;
+  padding:9px 10px;
+  background:#1d1b18;
+  color:#fff;
+}
+.close{
+  min-height:42px;
+  padding:0 13px;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:999px;
+  background:#fff;
+  color:var(--ink);
+  font-size:10px;
+  font-weight:900;
+}
+.modal-title{
+  min-width:0;
+  text-align:right;
+}
+.modal-title strong{
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-family:"Playfair Display",serif;
+  font-size:15px;
+}
+.modal-title span{
+  display:block;
+  color:#c5bdb5;
+  font-size:8px;
+  letter-spacing:.9px;
+  text-transform:uppercase;
+}
+.frame{width:100%;flex:1;border:0;background:#fff}
+
+@media(max-width:480px){
+  .brand span{display:none}
+  .hero{padding-top:35px}
+  .item{
+    grid-template-columns:auto 1fr;
+  }
+  .view{
+    grid-column:1/-1;
+    width:100%;
+    min-height:44px;
+  }
+}
+</style>
 </head>
-
 <body>
 
-  <!-- ========================================
-       HEADER
-  ========================================= -->
-
-  <header class="navbar">
-    <div class="wrap nav">
-
-      <button
-        class="brand route-button"
-        type="button"
-        data-route="essential"
-        aria-label="View Essential Dental website themes"
-      >
-        <span class="brand-mark">P</span>
-
-        <span class="brand-copy">
-          <strong>Plannique</strong>
-          <span>Dental Collection</span>
-        </span>
-      </button>
-
-      <nav
-        class="nav-actions"
-        aria-label="Website package navigation"
-      >
-        <button
-          class="nav-link route-button active"
-          type="button"
-          data-route="essential"
-        >
-          Essential
-        </button>
-
-        <button
-          class="nav-link route-button"
-          type="button"
-          data-route="signature"
-        >
-          Signature
-        </button>
-      </nav>
-
-    </div>
-  </header>
-
-  <!-- ========================================
-       MAIN CONTENT
-  ========================================= -->
-
-  <main>
-
-    <!-- ESSENTIAL PACKAGE -->
-
-    <section
-      class="collection-page active"
-      data-page="essential"
-    >
-
-      <div class="package-intro">
-        <div class="wrap">
-          <div class="intro-content">
-
-            <div class="eyebrow">
-              Essential Package · RM499
-            </div>
-
-            <h1>
-              One-page dental website themes
-            </h1>
-
-            <p>
-              Focused one-page website samples for dental clinics,
-              orthodontic practices, specialist clinics and smaller
-              oral care businesses.
-            </p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="theme-area">
-        <div class="wrap">
-          <div
-            class="theme-grid"
-            id="essentialGrid"
-          ></div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- SIGNATURE PACKAGE -->
-
-    <section
-      class="collection-page"
-      data-page="signature"
-    >
-
-      <div class="package-intro">
-        <div class="wrap">
-          <div class="intro-content">
-
-            <div class="eyebrow">
-              Signature Package · RM1,299
-            </div>
-
-            <h1>
-              Premium dental website themes
-            </h1>
-
-            <p>
-              Richer website samples with up to seven page views for
-              established dental clinics, specialist centres, laboratories
-              and premium oral care brands.
-            </p>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="theme-area">
-        <div class="wrap">
-          <div
-            class="theme-grid"
-            id="signatureGrid"
-          ></div>
-        </div>
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- ========================================
-       FOOTER
-  ========================================= -->
-
-  <footer>
-    <div class="wrap footer-content">
-
-      <div class="footer-name">
-        Plannique Design Co.
-      </div>
-
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <div class="mark">P</div>
       <div>
-        © 2026 Plannique Design Co. All rights reserved.
+        <strong>Plannique</strong>
+        <span>Dental Collection</span>
       </div>
-
     </div>
-  </footer>
-
-  <!-- ========================================
-       FULL-SCREEN PREVIEW
-  ========================================= -->
-
-  <div
-    class="preview-modal"
-    id="previewModal"
-    aria-hidden="true"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="modalThemeName"
-  >
-
-    <div class="preview-toolbar">
-
-      <button
-        class="back-collection-button"
-        id="closePreview"
-        type="button"
-      >
-        ← Back to Collection
-      </button>
-
-      <div class="modal-information">
-
-        <strong id="modalThemeName">
-          Website Theme
-        </strong>
-
-        <span id="modalThemeMeta">
-          Package · Theme Code
-        </span>
-
-      </div>
-
-      <div
-        class="toolbar-spacer"
-        aria-hidden="true"
-      ></div>
-
-    </div>
-
-    <div class="preview-stage">
-
-      <iframe
-        class="preview-frame"
-        id="previewFrame"
-        title="Dental website theme preview"
-      ></iframe>
-
-    </div>
-
+    <a class="back" href="https://evieeviee.github.io/PlanniqueDesignCo/" target="_top">Back</a>
   </div>
-
-  <script>
-    /* ========================================
-       DENTAL WEBSITE THEMES
-
-       Keep each "file" value matched with the
-       actual HTML filename inside the repository.
-    ======================================== */
-
-    const designs = [
-      {
-        package: "essential",
-        name: "Clarity",
-        code: "DEN-CLA-01",
-        file: "starter.html",
-        style: "Clean Essential",
-        description:
-          "A clear one-page dental website with treatments, reviews, location details and appointment enquiry.",
-        image:
-          "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=85",
-        tags: [
-          "One Page",
-          "Treatments",
-          "WhatsApp"
-        ]
-      },
-
-      {
-        package: "signature",
-        name: "Pearl",
-        code: "DEN-PEA-01",
-        file: "advance.html",
-        style: "Modern Clinical",
-        description:
-          "A professional dental website with detailed treatments, patient information and appointment enquiries.",
-        image:
-          "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85",
-        tags: [
-          "Up to 7 Pages",
-          "Clinical",
-          "Appointment Form"
-        ]
-      },
-
-      {
-        package: "signature",
-        name: "Ivory",
-        code: "DEN-IVO-01",
-        file: "advance1.html",
-        style: "Soft Professional",
-        description:
-          "A welcoming dental website combining a calm presentation with clear treatment information.",
-        image:
-          "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=85",
-        tags: [
-          "Up to 7 Pages",
-          "Soft Style",
-          "Bilingual"
-        ]
-      },
-
-      {
-        package: "signature",
-        name: "Verde",
-        code: "DEN-VER-01",
-        file: "advance2.html",
-        style: "Natural Wellness",
-        description:
-          "A refined dental and wellness website with a calm and patient-friendly visual direction.",
-        image:
-          "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85",
-        tags: [
-          "Up to 7 Pages",
-          "Wellness",
-          "Dentist Profiles"
-        ]
-      },
-
-      {
-        package: "signature",
-        name: "Apex Dental Lab",
-        code: "DEN-APX-01",
-        file: "apex-dental-lab.html",
-        style: "Technical Laboratory",
-        description:
-          "A precise modern website for dental laboratories, restorative clinics and specialist services.",
-        image:
-          "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=900&q=85",
-        tags: [
-          "Up to 7 Pages",
-          "Laboratory",
-          "Modern"
-        ]
-      },
-
-      {
-        package: "signature",
-        name: "Dental Matrix",
-        code: "DEN-MAT-01",
-        file: "dental-matrix.html",
-        style: "Digital Technology",
-        description:
-          "A technology-focused dental website with strong visual sections and modern interactions.",
-        image:
-          "https://images.unsplash.com/photo-1606265752439-1f18756aa376?auto=format&fit=crop&w=900&q=85",
-        tags: [
-          "Up to 7 Pages",
-          "Technology",
-          "Bilingual"
-        ]
-      },
-
-      {
-        package: "signature",
-        name: "Lumière",
-        code: "DEN-LUM-01",
-        file: "lumiereV1.html",
-        style: "Luxury Editorial",
-        description:
-          "A premium editorial dental website created for elegant and established clinics.",
-        image:
-          "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85",
-        tags: [
-          "Up to 7 Pages",
-          "Luxury",
-          "Bilingual"
-        ]
-      },
-
-      {
-        package: "signature",
-        name: "Lumina Sanctuary",
-        code: "DEN-LMS-01",
-        file: "lumina-dental-sanctuary.html",
-        style: "Calm Sanctuary",
-        description:
-          "A soft calming clinic website designed around comfort, confidence and patient care.",
-        image:
-          "https://images.unsplash.com/photo-1581585099402-5b7a6f4a4d1b?auto=format&fit=crop&w=900&q=85",
-        tags: [
-          "Up to 7 Pages",
-          "Calm Style",
-          "Patient Care"
-        ]
-      },
-
-      {
-        package: "signature",
-        name: "Nova",
-        code: "DEN-NOV-01",
-        file: "novaV1.html",
-        style: "Contemporary Dental",
-        description:
-          "A fresh modern dental website with structured services and a strong appointment journey.",
-        image:
-          "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=85",
-        tags: [
-          "Up to 7 Pages",
-          "Modern",
-          "Bilingual"
-        ]
-      },
-
-      {
-        package: "signature",
-        name: "Prestige Smile",
-        code: "DEN-PRE-01",
-        file: "premium.html",
-        style: "Premium Healthcare",
-        description:
-          "A complete premium clinic website with detailed services, specialists and patient trust sections.",
-        image:
-          "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85",
-        tags: [
-          "Up to 7 Pages",
-          "Premium",
-          "Specialists"
-        ]
-      }
-    ];
-
-    /* ========================================
-       FALLBACK IMAGE
-    ======================================== */
-
-    const fallbackImage =
-      "data:image/svg+xml;charset=UTF-8," +
-      encodeURIComponent(`
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="1200"
-          height="800"
-          viewBox="0 0 1200 800"
-        >
-          <defs>
-            <linearGradient
-              id="fallbackGradient"
-              x1="0"
-              y1="0"
-              x2="1"
-              y2="1"
-            >
-              <stop stop-color="#e8e0d5"/>
-              <stop offset="1" stop-color="#75816f"/>
-            </linearGradient>
-          </defs>
-
-          <rect
-            width="1200"
-            height="800"
-            fill="url(#fallbackGradient)"
-          />
-
-          <text
-            x="600"
-            y="400"
-            text-anchor="middle"
-            dominant-baseline="middle"
-            fill="#ffffff"
-            font-family="Arial"
-            font-size="52"
-            font-weight="700"
-          >
-            Plannique Theme Preview
-          </text>
-        </svg>
-      `);
-
-    /* ========================================
-       CREATE THEME CARD
-    ======================================== */
-
-    function createThemeCard(design) {
-      const packageName =
-        design.package === "essential"
-          ? "Essential · RM499"
-          : "Signature · RM1,299";
-
-      const websiteStructure =
-        design.package === "essential"
-          ? "One-page website"
-          : "Up to 7 page views";
-
-      const tags = (design.tags || [])
-        .slice(0, 3)
-        .map(function (tag) {
-          return "<span>✓ " + tag + "</span>";
-        })
-        .join("");
-
-      return `
-        <article class="theme-card">
-
-          <div class="theme-preview">
-
-            <img
-              src="${design.image}"
-              alt="${design.name} Dental website design"
-              loading="lazy"
-              onerror="this.onerror=null; this.src=fallbackImage;"
-            >
-
-            <span class="package-label">
-              ${design.package}
-            </span>
-
-            <span class="design-code">
-              ${design.code}
-            </span>
-
-            <span class="design-style">
-              ${design.style || "Plannique Theme"}
-            </span>
-
-          </div>
-
-          <div class="theme-body">
-
-            <h2>
-              ${design.name}
-            </h2>
-
-            <p class="theme-description">
-              ${design.description}
-            </p>
-
-            <div class="theme-tags">
-              ${tags}
-            </div>
-
-            <div class="package-box">
-
-              <strong>
-                ${packageName}
-              </strong>
-
-              <span>
-                ${websiteStructure}
-              </span>
-
-            </div>
-
-            <button
-              class="preview-button"
-              type="button"
-              data-preview-code="${design.code}"
-            >
-              Open Full-Screen Preview
-            </button>
-
-          </div>
-
-        </article>
-      `;
-    }
-
-    /* ========================================
-       DISPLAY THEMES
-    ======================================== */
-
-    const essentialDesigns = designs.filter(function (design) {
-      return design.package === "essential";
-    });
-
-    const signatureDesigns = designs.filter(function (design) {
-      return design.package === "signature";
-    });
-
-    document.getElementById("essentialGrid").innerHTML =
-      essentialDesigns.map(createThemeCard).join("");
-
-    document.getElementById("signatureGrid").innerHTML =
-      signatureDesigns.map(createThemeCard).join("");
-
-    /* ========================================
-       ESSENTIAL / SIGNATURE NAVIGATION
-    ======================================== */
-
-    const collectionPages = Array.from(
-      document.querySelectorAll(".collection-page")
-    );
-
-    const navigationLinks = Array.from(
-      document.querySelectorAll(".nav-link")
-    );
-
-    function showPackage(route, shouldScroll = true) {
-      const selectedRoute =
-        route === "signature"
-          ? "signature"
-          : "essential";
-
-      collectionPages.forEach(function (page) {
-        page.classList.toggle(
-          "active",
-          page.dataset.page === selectedRoute
-        );
-      });
-
-      navigationLinks.forEach(function (link) {
-        link.classList.toggle(
-          "active",
-          link.dataset.route === selectedRoute
-        );
-      });
-
-      if (shouldScroll) {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-      }
-    }
-
-    document
-      .querySelectorAll(".route-button")
-      .forEach(function (button) {
-        button.addEventListener("click", function () {
-          showPackage(button.dataset.route);
-        });
-      });
-
-    /* ========================================
-       FULL-SCREEN IFRAME PREVIEW
-    ======================================== */
-
-    const previewModal =
-      document.getElementById("previewModal");
-
-    const previewFrame =
-      document.getElementById("previewFrame");
-
-    const modalThemeName =
-      document.getElementById("modalThemeName");
-
-    const modalThemeMeta =
-      document.getElementById("modalThemeMeta");
-
-    const closePreviewButton =
-      document.getElementById("closePreview");
-
-    let lastFocusedElement = null;
-
-    function openPreview(themeCode) {
-      const selectedDesign = designs.find(function (design) {
-        return design.code === themeCode;
-      });
-
-      if (!selectedDesign) {
-        return;
-      }
-
-      lastFocusedElement = document.activeElement;
-
-      modalThemeName.textContent =
-        selectedDesign.name;
-
-      modalThemeMeta.textContent =
-        (
-          selectedDesign.package === "essential"
-            ? "Essential"
-            : "Signature"
-        ) +
-        " · " +
-        selectedDesign.code;
-
-      previewFrame.src = selectedDesign.file;
-
-      previewModal.classList.add("open");
-      previewModal.setAttribute("aria-hidden", "false");
-
-      document.body.classList.add("modal-open");
-
-      closePreviewButton.focus();
-    }
-
-    function closePreview() {
-      previewModal.classList.remove("open");
-      previewModal.setAttribute("aria-hidden", "true");
-
-      previewFrame.src = "";
-
-      document.body.classList.remove("modal-open");
-
-      if (lastFocusedElement) {
-        lastFocusedElement.focus();
-      }
-    }
-
-    document
-      .querySelectorAll("[data-preview-code]")
-      .forEach(function (button) {
-        button.addEventListener("click", function () {
-          openPreview(button.dataset.previewCode);
-        });
-      });
-
-    closePreviewButton.addEventListener(
-      "click",
-      closePreview
-    );
-
-    document.addEventListener("keydown", function (event) {
-      if (
-        event.key === "Escape" &&
-        previewModal.classList.contains("open")
-      ) {
-        closePreview();
-      }
-    });
-
-    showPackage("essential", false);
-  </script>
-
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Dental Website Collection</div>
+    <h1>Choose a showcase.</h1>
+    <p>Select Essential or Signature, then open the theme you want to preview.</p>
+  </div>
+</section>
+
+<div class="tabs">
+  <div class="wrap tab-row">
+    <button class="tab active" data-package="essential">Essential · RM499</button>
+    <button class="tab" data-package="signature">Signature · RM1,299</button>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="package active" data-page="essential">
+    <div class="package-head">
+      <h2>Essential</h2>
+      <p>One-page website themes.</p>
+    </div>
+    <div class="list" id="essentialList"></div>
+    <div class="note">Essential includes a focused one-page website with mobile responsiveness and WhatsApp enquiry.</div>
+  </section>
+
+  <section class="package" data-page="signature">
+    <div class="package-head">
+      <h2>Signature</h2>
+      <p>Multi-page website themes.</p>
+    </div>
+    <div class="list" id="signatureList"></div>
+    <div class="note">Signature includes up to seven page views with richer content and a more complete customer journey.</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Plannique Design Co.</div>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="bar">
+    <button class="close" id="close">← Back</button>
+    <div class="modal-title">
+      <strong id="modalName">Website Theme</strong>
+      <span id="modalMeta">Package</span>
+    </div>
+  </div>
+  <iframe class="frame" id="frame" title="Dental website preview"></iframe>
+</div>
+
+<script>
+const designs = [
+  {package:"essential",name:"Clarity",file:"starter.html"},
+  {package:"essential",name:"Maison Smile",file:"essential-maisonV2.html"},
+  {package:"essential",name:"Nova Essential",file:"essential-novaV1.html"},
+
+  {package:"signature",name:"Apex Performance",file:"advance2.html"},
+  {package:"signature",name:"Apex Dental Lab",file:"apex-dental-lab.html"},
+  {package:"signature",name:"Dental Matrix",file:"dental-matrix.html"},
+  {package:"signature",name:"Lumière",file:"lumiereV1.html"},
+  {package:"signature",name:"Lumina Sanctuary",file:"lumina-dental-sanctuary.html"},
+  {package:"signature",name:"Nova Signature",file:"novaV1.html"},
+  {package:"signature",name:"Prestige Smile",file:"premium.html"},
+  {package:"signature",name:"Atelier Noire",file:"signature-noirV1.html"},
+  {package:"signature",name:"Studio Bloom",file:"signature-popV1.html"}
+];
+
+function render(pkg, target){
+  const list=designs.filter(d=>d.package===pkg);
+  document.getElementById(target).innerHTML=list.map((d,i)=>`
+    <article class="item">
+      <div class="number">${String(i+1).padStart(2,"0")}</div>
+      <div>
+        <h3>Showcase ${i+1}</h3>
+        <small>${d.name}</small>
+      </div>
+      <button class="view" data-file="${d.file}" data-name="${d.name}" data-package="${pkg}">View</button>
+    </article>
+  `).join("");
+}
+render("essential","essentialList");
+render("signature","signatureList");
+
+const tabs=[...document.querySelectorAll(".tab")];
+const packages=[...document.querySelectorAll(".package")];
+
+tabs.forEach(tab=>{
+  tab.addEventListener("click",()=>{
+    tabs.forEach(t=>t.classList.toggle("active",t===tab));
+    packages.forEach(p=>p.classList.toggle("active",p.dataset.page===tab.dataset.package));
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+});
+
+const modal=document.getElementById("modal");
+const frame=document.getElementById("frame");
+
+document.addEventListener("click",e=>{
+  const btn=e.target.closest("[data-file]");
+  if(!btn)return;
+  document.getElementById("modalName").textContent=btn.dataset.name;
+  document.getElementById("modalMeta").textContent=btn.dataset.package==="essential"?"Essential Package":"Signature Package";
+  frame.src=btn.dataset.file;
+  modal.classList.add("open");
+  document.body.classList.add("modal-open");
+});
+
+function closeModal(){
+  modal.classList.remove("open");
+  frame.src="";
+  document.body.classList.remove("modal-open");
+}
+document.getElementById("close").addEventListener("click",closeModal);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+</script>
 </body>
 </html>
