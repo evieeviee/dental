@@ -1,205 +1,221 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUMINA DENTAL | Aesthetic & Restorative Clinic</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .font-serif-title { font-family: 'Cormorant Garamond', serif; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8F6F2; }
-        .page-section { display: none; }
-        .page-section.active { display: block; animation: fadeIn 0.4s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HALO Family Dental | Happy, Gentle Dentistry</title>
+<meta name="description" content="HALO Family Dental offers gentle family, children's, orthodontic and cosmetic dentistry in Kuala Lumpur.">
+<meta name="theme-color" content="#7b62d9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lav:#7b62d9;--lav2:#a995f1;--sky:#7fd8ee;--coral:#ff8d79;--yellow:#ffe26e;
+  --mint:#aee7cf;--paper:#fffdfb;--bg:#f8f3ff;--ink:#2e2741;--muted:#6f6680;--line:#ded6ea;--shadow:0 24px 60px rgba(83,60,130,.14)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+body.lock{overflow:hidden}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%}
+button,input,select,textarea{font:inherit}
+.container{width:min(1220px,92%);margin:auto}
+header{position:sticky;top:0;z-index:1000;background:rgba(248,243,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;font-family:"Baloo 2",cursive;font-size:24px;font-weight:800}
+.mark{width:45px;height:45px;border-radius:50% 50% 50% 12px;background:var(--lav);color:#fff;display:grid;place-items:center;transform:rotate(-8deg)}
+.menu{display:flex;gap:22px;font-size:13px;font-weight:800}
+.menu a{padding:28px 0}.menu a.active{color:var(--lav)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border:0;border-radius:999px;font-weight:800;transition:.25s;cursor:pointer}
+.btn:hover{transform:translateY(-3px)}
+.btn-lav{background:var(--lav);color:#fff}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-light{background:#fff;border:1px solid var(--line)}
+.menu-btn{display:none;width:45px;height:45px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:21px}
+.page{display:none}.page.active{display:block;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.hero{padding:50px 0 78px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(127,216,238,.22);left:-180px;top:-190px}
+.hero:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(255,141,121,.15);right:-120px;bottom:-120px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.hero-copy{padding:40px 0}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#fff;color:var(--lav);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:18px}
+h1,h2,h3{font-family:"Baloo 2",cursive;line-height:1}
+.hero h1{font-size:clamp(54px,7vw,94px);letter-spacing:-3px;margin-bottom:20px}
+.hero h1 span{color:var(--coral)}
+.hero p{color:var(--muted);font-size:18px;max-width:590px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:34px}
+.meta-pill{padding:12px 15px;border-radius:18px;background:#fff;box-shadow:var(--shadow)}
+.meta-pill b{display:block;color:var(--lav);font-size:18px}.meta-pill span{font-size:11px;color:var(--muted)}
+.hero-collage{position:relative;min-height:650px}
+.photo-main{position:absolute;inset:0 70px 80px 0;height:570px;object-fit:cover;border-radius:80px 80px 28px 80px;box-shadow:var(--shadow)}
+.photo-small{position:absolute;right:0;bottom:0;width:245px;height:290px;object-fit:cover;border:10px solid var(--bg);border-radius:60px 60px 60px 18px;box-shadow:var(--shadow)}
+.sticker{position:absolute;left:-20px;bottom:55px;width:140px;height:140px;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--yellow);color:var(--ink);font-family:"Baloo 2",cursive;font-weight:800;transform:rotate(-8deg);box-shadow:var(--shadow)}
+.sticker b{display:block;font-size:30px}
+.wave{height:70px;background:var(--lav);clip-path:ellipse(72% 100% at 50% 100%)}
+.section{padding:92px 0}
+.section-head{max-width:760px;margin-bottom:40px}
+.section-head small{color:var(--lav);font-weight:900;text-transform:uppercase;letter-spacing:1.4px}
+.section-head h2{font-size:clamp(42px,5vw,68px);margin:10px 0 14px}
+.section-head p{color:var(--muted);font-size:17px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{min-height:280px;padding:26px;border-radius:32px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;border:0;text-align:left;transition:.25s}
+.card:hover{transform:translateY(-6px)}
+.card:nth-child(1){background:var(--sky)}.card:nth-child(2){background:var(--yellow)}.card:nth-child(3){background:var(--coral);color:#fff}.card:nth-child(4){background:var(--mint)}.card:nth-child(5){background:var(--lav);color:#fff}.card:nth-child(6){background:#fff;border:1px solid var(--line)}
+.card-top{display:flex;justify-content:space-between;align-items:center}.card-no{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.75);display:grid;place-items:center;font-family:"Baloo 2",cursive;font-size:20px}.card-arrow{font-size:24px}
+.card h3{font-size:30px;margin-bottom:8px}.card p{font-size:14px;opacity:.78}
+.family-section{background:var(--paper)}
+.family-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:24px}
+.family-copy{padding:44px;border-radius:36px;background:var(--lav);color:#fff;display:flex;flex-direction:column;justify-content:space-between}
+.family-copy h2{font-size:clamp(42px,5vw,68px)}.family-copy p{color:#e6ddff;margin-top:15px}
+.steps{margin-top:28px}
+.step{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.25)}
+.step span{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:var(--ink);font-family:"Baloo 2",cursive;font-size:20px}.step strong{display:block}.step p{font-size:13px;margin:0;color:#e7dfff}
+.family-photo{min-height:640px;border-radius:36px;overflow:hidden}.family-photo img{height:100%;min-height:640px;object-fit:cover}
+.banner{padding:85px 0 60px;background:var(--paper)}
+.banner h1{font-size:clamp(52px,7vw,94px)}.banner p{color:var(--muted);font-size:18px;max-width:720px;margin-top:18px}
+.gallery{display:grid;grid-template-columns:1.1fr .9fr;grid-template-rows:300px 300px;gap:18px}
+.gallery figure{position:relative;overflow:hidden;border-radius:30px}.gallery figure:first-child{grid-row:1/3}
+.gallery img{height:100%;object-fit:cover}.gallery figcaption{position:absolute;left:16px;bottom:16px;padding:9px 13px;border-radius:999px;background:#fff;font-size:12px;font-weight:800}
+.team-grid,.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.team{background:#fff;border-radius:30px;overflow:hidden;border:1px solid var(--line)}
+.team img{height:420px;object-fit:cover;object-position:center top}.team-copy{padding:22px}.team h3{font-size:29px}.team p{color:var(--lav);font-weight:800;font-size:13px;margin:6px 0}.team span{font-size:13px;color:var(--muted)}
+.reviews{background:var(--yellow)}
+.review{background:#fff;border-radius:26px;padding:27px}.stars{color:var(--coral);letter-spacing:3px}.review p{font-family:"Baloo 2",cursive;font-size:22px;margin:14px 0 20px}.review strong{font-size:12px}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px}
+.contact-card,.form-card{background:#fff;border:1px solid var(--line);border-radius:30px;padding:32px;box-shadow:var(--shadow)}
+.contact-card h2,.form-card h2{font-size:40px;margin-bottom:9px}.contact-card>p,.form-card>p{color:var(--muted);margin-bottom:22px}
+.contact-item{padding:14px 0;border-bottom:1px solid var(--line)}.contact-item strong{display:block;color:var(--lav);font-size:11px;text-transform:uppercase;letter-spacing:1px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}
+.field label{font-size:12px;font-weight:800}.field input,.field select,.field textarea{width:100%;padding:13px;border:1px solid var(--line);border-radius:13px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--lav);box-shadow:0 0 0 3px rgba(123,98,217,.1)}
+.success{display:none;margin-top:14px;background:var(--mint);padding:12px;border-radius:12px;font-size:13px;font-weight:800}
+.faq{display:grid;gap:10px;margin-top:20px}.faq-item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}.faq-q{width:100%;padding:17px;border:0;background:transparent;display:flex;justify-content:space-between;text-align:left;font-weight:800;cursor:pointer}.faq-a{max-height:0;overflow:hidden;color:var(--muted);transition:max-height .3s}.faq-a p{padding:0 17px 17px}.faq-item.active .faq-a{max-height:160px}
+.map{height:430px;border-radius:30px;overflow:hidden;margin-top:24px;box-shadow:var(--shadow)}.map iframe{width:100%;height:100%;border:0}
+footer{background:var(--ink);color:#fff;padding:52px 0 24px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:38px}.footer-grid p,.footer-grid a{color:#bbb2c7}.footer-grid a{display:block;margin:8px 0}.footer-grid h3{font-size:18px;margin-bottom:10px}.footer-bottom{padding-top:20px;border-top:1px solid rgba(255,255,255,.16);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#8f8799;font-size:12px}
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:900;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-size:24px;box-shadow:var(--shadow)}
+.modal{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(46,39,65,.78);backdrop-filter:blur(8px)}.modal.open{display:flex}
+.modal-card{width:min(920px,100%);max-height:90vh;display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:32px;overflow:hidden;box-shadow:var(--shadow)}.modal-img{height:100%;min-height:560px;object-fit:cover}.modal-content{position:relative;padding:36px;overflow:auto}.modal-content h3{font-size:42px;margin:12px 0}.modal-content p{color:var(--muted)}.modal-list{margin:20px 0 24px 20px;display:grid;gap:9px}.close{position:absolute;right:16px;top:16px;width:42px;height:42px;border-radius:50%;background:var(--yellow);border:0;font-size:22px;cursor:pointer}
+@media(max-width:1000px){
+ .menu{position:absolute;top:80px;left:4%;right:4%;display:none;flex-direction:column;align-items:flex-start;background:#fff;padding:18px;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}.menu.open{display:flex}.nav>.btn{display:none}.menu-btn{display:block}
+ .hero-grid,.family-grid,.contact-grid{grid-template-columns:1fr}.hero-collage{min-height:570px}.cards{grid-template-columns:repeat(2,1fr)}.team-grid,.review-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+ .hero h1{font-size:56px}.hero-collage{min-height:500px}.photo-main{inset:0 35px 70px 0;height:430px}.photo-small{width:190px;height:220px}.sticker{width:110px;height:110px;left:0}.section{padding:72px 0}
+ .cards,.team-grid,.review-grid,.form-grid,.footer-grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+ .gallery{grid-template-columns:1fr;grid-template-rows:420px 260px 260px}.gallery figure:first-child{grid-row:auto}
+ .modal-card{grid-template-columns:1fr}.modal-img{min-height:220px;height:230px}.modal-content{padding:28px}.modal-content h3{font-size:34px;padding-right:38px}
+}
+</style>
 </head>
-<body class="text-stone-800 antialiased selection:bg-[#2D5A52] selection:text-white">
+<body>
+<header><div class="container nav">
+  <a class="brand route" href="#/home" data-route="home"><span class="mark">H</span>HALO Family Dental</a>
+  <nav class="menu" id="menu">
+    <a class="route" href="#/home" data-route="home">Home</a>
+    <a class="route" href="#/services" data-route="services">Treatments</a>
+    <a class="route" href="#/space" data-route="space">Our Space</a>
+    <a class="route" href="#/team" data-route="team">Dentists</a>
+    <a class="route" href="#/stories" data-route="stories">Stories</a>
+    <a class="route" href="#/contact" data-route="contact">Contact</a>
+  </nav>
+  <a class="btn btn-lav route" href="#/contact" data-route="contact">Book a Visit</a>
+  <button class="menu-btn" id="menuBtn">☰</button>
+</div></header>
 
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 bg-[#F8F6F2]/90 border-b border-stone-200/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" onclick="showPage('home')" class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-full bg-[#2D5A52] text-white flex items-center justify-center font-serif-title text-xl font-bold">L</div>
-                <div>
-                    <span class="font-serif-title text-2xl font-semibold tracking-wider text-stone-900 uppercase leading-none block">LUMINA</span>
-                    <span class="text-[9px] font-sans tracking-[0.25em] text-[#2D5A52] uppercase block font-medium">Dental Sanctuary</span>
-                </div>
-            </a>
+<main>
+<section class="page active" id="page-home">
+  <section class="hero"><div class="container hero-grid">
+    <div class="hero-copy"><div class="kicker">Gentle dentistry for every age</div><h1>Happy visits. <span>Healthy smiles.</span></h1><p>Friendly family, children's, orthodontic and cosmetic dentistry in a bright, reassuring clinic.</p><div class="hero-actions"><a class="btn btn-lav route" href="#/contact" data-route="contact">Book Your Visit</a><a class="btn btn-light route" href="#/services" data-route="services">See Treatments</a></div><div class="hero-meta"><div class="meta-pill"><b>4.9 ★</b><span>Patient rating</span></div><div class="meta-pill"><b>Kids welcome</b><span>Family-friendly care</span></div><div class="meta-pill"><b>EN / 中文</b><span>Bilingual support</span></div></div></div>
+    <div class="hero-collage"><img class="photo-main" src="https://images.pexels.com/photos/4269694/pexels-photo-4269694.jpeg?auto=compress&cs=tinysrgb&w=1500" alt="Family dental consultation"><img class="photo-small" src="https://images.pexels.com/photos/5998474/pexels-photo-5998474.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Friendly dentist"><div class="sticker"><div><b>New</b>family appointments</div></div></div>
+  </div></section>
+  <div class="wave"></div>
 
-            <nav class="hidden md:flex items-center gap-1 bg-stone-200/50 p-1.5 rounded-full border border-stone-300/50 text-xs font-medium">
-                <button onclick="showPage('home')" id="nav-home" class="nav-btn px-5 py-2 rounded-full uppercase tracking-wider text-stone-900 bg-white shadow-sm transition-all">Home</button>
-                <button onclick="showPage('services')" id="nav-services" class="nav-btn px-5 py-2 rounded-full uppercase tracking-wider text-stone-600 hover:text-stone-900 transition-all">Services</button>
-                <button onclick="showPage('locations')" id="nav-locations" class="nav-btn px-5 py-2 rounded-full uppercase tracking-wider text-stone-600 hover:text-stone-900 transition-all">Clinics & Contact</button>
-            </nav>
+  <section class="section"><div class="container"><div class="section-head"><small>What we offer</small><h2>Care for little smiles, growing smiles and confident smiles.</h2><p>Click any treatment to see more information and contact the clinic directly.</p></div>
+  <div class="cards">
+    <button class="card" data-service="children"><div class="card-top"><span class="card-no">01</span><span class="card-arrow">↗</span></div><div><h3>Children's Dentistry</h3><p>Gentle check-ups and positive early dental experiences.</p></div></button>
+    <button class="card" data-service="family"><div class="card-top"><span class="card-no">02</span><span class="card-arrow">↗</span></div><div><h3>Family Check-Ups</h3><p>Convenient preventive care for every family member.</p></div></button>
+    <button class="card" data-service="aligners"><div class="card-top"><span class="card-no">03</span><span class="card-arrow">↗</span></div><div><h3>Clear Aligners</h3><p>Discreet orthodontic treatment for teens and adults.</p></div></button>
+    <button class="card" data-service="whitening"><div class="card-top"><span class="card-no">04</span><span class="card-arrow">↗</span></div><div><h3>Teeth Whitening</h3><p>Professional whitening for a brighter smile.</p></div></button>
+    <button class="card" data-service="implants"><div class="card-top"><span class="card-no">05</span><span class="card-arrow">↗</span></div><div><h3>Dental Implants</h3><p>Long-term replacement for missing teeth.</p></div></button>
+    <button class="card" data-service="emergency"><div class="card-top"><span class="card-no">06</span><span class="card-arrow">↗</span></div><div><h3>Emergency Care</h3><p>Prompt help for pain, swelling and dental injury.</p></div></button>
+  </div></div></section>
 
-            <div class="flex items-center gap-3">
-                <a href="https://wa.me/60123456789?text=Hi%20Lumina%20Dental!%20I%20would%20like%20to%20book%20a%20consultation." target="_blank" class="hidden sm:inline-flex items-center gap-2 border border-stone-300 text-stone-800 hover:bg-stone-200/50 px-4 py-2 rounded-full text-xs font-medium transition-all">
-                    <span>💬</span> WhatsApp Clinic
-                </a>
-                <button onclick="showPage('booking')" class="bg-[#2D5A52] hover:bg-stone-900 text-white px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-medium transition-all shadow-md">
-                    Book Appointment
-                </button>
-            </div>
-        </div>
-    </header>
+  <section class="section family-section"><div class="container family-grid">
+    <div class="family-copy"><div><h2>A simple visit from hello to follow-up.</h2><p>Clear steps help children, parents and adult patients know what to expect.</p></div><div class="steps">
+      <div class="step"><span>1</span><div><strong>Message the clinic</strong><p>Tell us who the appointment is for and what help is needed.</p></div></div>
+      <div class="step"><span>2</span><div><strong>Gentle consultation</strong><p>The dentist explains findings in a clear, reassuring way.</p></div></div>
+      <div class="step"><span>3</span><div><strong>Choose the next step</strong><p>Proceed only after understanding the recommendation.</p></div></div>
+    </div><a class="btn btn-coral route" href="#/contact" data-route="contact">Book Consultation</a></div>
+    <div class="family-photo"><img src="https://images.pexels.com/photos/4269688/pexels-photo-4269688.jpeg?auto=compress&cs=tinysrgb&w=1500" alt="Child-friendly dental visit"></div>
+  </div></section>
+</section>
 
-    <!-- Page 1: Home -->
-    <main id="page-home" class="page-section active">
-        <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24 grid lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7 space-y-6">
-                <span class="text-xs font-mono tracking-widest text-[#2D5A52] uppercase font-semibold">// Gentle Dental Care</span>
-                <h1 class="font-serif-title text-5xl sm:text-7xl font-normal text-stone-900 leading-[1.05]">
-                    Crafting healthy, <br>
-                    <span class="italic text-[#2D5A52]">radiant smiles</span> with care.
-                </h1>
-                <p class="text-stone-600 text-base max-w-lg font-light leading-relaxed">
-                    Experience anxiety-free, state-of-the-art dental procedures in a calming sanctuary environment. From porcelain veneers to precision implants.
-                </p>
-                <div class="pt-4 flex flex-wrap gap-4">
-                    <button onclick="showPage('booking')" class="bg-[#2D5A52] text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest hover:bg-stone-900 transition-all shadow-lg">
-                        Reserve Consultation
-                    </button>
-                    <button onclick="showPage('services')" class="border border-stone-300 text-stone-800 px-8 py-4 rounded-full text-xs uppercase tracking-widest hover:border-stone-900 transition-all">
-                        Explore Treatments
-                    </button>
-                </div>
-            </div>
-            <div class="lg:col-span-5 relative">
-                <div class="bg-stone-200/60 p-4 rounded-3xl border border-stone-300/60">
-                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" alt="Lumina Dental Studio" class="rounded-2xl w-full h-[450px] object-cover">
-                </div>
-            </div>
-        </section>
-    </main>
+<section class="page" id="page-services"><div class="banner"><div class="container"><div class="kicker">Treatment menu</div><h1>Dental care for the whole family.</h1><p>Preventive, orthodontic, cosmetic and restorative treatments in one welcoming clinic.</p></div></div><section class="section"><div class="container cards">
+<button class="card" data-service="children"><div class="card-top"><span class="card-no">01</span><span class="card-arrow">↗</span></div><div><h3>Children's Dentistry</h3><p>Positive, age-appropriate dental care.</p></div></button>
+<button class="card" data-service="family"><div class="card-top"><span class="card-no">02</span><span class="card-arrow">↗</span></div><div><h3>Family Check-Ups</h3><p>Preventive care for children and adults.</p></div></button>
+<button class="card" data-service="aligners"><div class="card-top"><span class="card-no">03</span><span class="card-arrow">↗</span></div><div><h3>Clear Aligners</h3><p>Discreet teeth straightening.</p></div></button>
+<button class="card" data-service="whitening"><div class="card-top"><span class="card-no">04</span><span class="card-arrow">↗</span></div><div><h3>Teeth Whitening</h3><p>Professional smile brightening.</p></div></button>
+<button class="card" data-service="implants"><div class="card-top"><span class="card-no">05</span><span class="card-arrow">↗</span></div><div><h3>Dental Implants</h3><p>Replacement for missing teeth.</p></div></button>
+<button class="card" data-service="emergency"><div class="card-top"><span class="card-no">06</span><span class="card-arrow">↗</span></div><div><h3>Emergency Care</h3><p>Prompt support for urgent concerns.</p></div></button>
+</div></section></section>
 
-    <!-- Page 2: Services -->
-    <main id="page-services" class="page-section">
-        <section class="max-w-7xl mx-auto px-6 py-16 space-y-12">
-            <div class="text-center max-w-xl mx-auto space-y-3">
-                <span class="text-xs font-mono text-[#2D5A52] uppercase tracking-widest">// Treatment Programs</span>
-                <h2 class="font-serif-title text-4xl sm:text-5xl text-stone-900">COMPREHENSIVE CARE</h2>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 space-y-4 hover:shadow-lg transition-all">
-                    <div class="text-[#2D5A52] font-serif-title text-3xl">01</div>
-                    <h3 class="font-serif-title text-2xl text-stone-900">Cosmetic Veneers</h3>
-                    <p class="text-xs text-stone-600 leading-relaxed">Custom ultra-thin porcelain veneers designed to transform smile symmetry, shape, and shade naturally.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 space-y-4 hover:shadow-lg transition-all">
-                    <div class="text-[#2D5A52] font-serif-title text-3xl">02</div>
-                    <h3 class="font-serif-title text-2xl text-stone-900">Invisalign® Aligners</h3>
-                    <p class="text-xs text-stone-600 leading-relaxed">Virtually invisible clear aligner therapy tailored for precise teeth straightening without metal braces.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 space-y-4 hover:shadow-lg transition-all">
-                    <div class="text-[#2D5A52] font-serif-title text-3xl">03</div>
-                    <h3 class="font-serif-title text-2xl text-stone-900">Dental Implants</h3>
-                    <p class="text-xs text-stone-600 leading-relaxed">3D guided permanent tooth replacement solutions restoring full bite strength and natural aesthetics.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+<section class="page" id="page-space"><div class="banner"><div class="container"><div class="kicker">Designed for comfort</div><h1>A brighter kind of dental clinic.</h1><p>Friendly interiors, child-conscious details and modern treatment technology.</p></div></div><section class="section"><div class="container gallery">
+<figure><img src="https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?auto=compress&cs=tinysrgb&w=1500" alt="Bright clinic reception"><figcaption>Welcome Area</figcaption></figure>
+<figure><img src="https://images.pexels.com/photos/305566/pexels-photo-305566.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Modern dental equipment"><figcaption>Technology</figcaption></figure>
+<figure><img src="https://images.pexels.com/photos/3779695/pexels-photo-3779695.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Dental treatment room"><figcaption>Treatment Room</figcaption></figure>
+</div></section></section>
 
-    <!-- Page 3: Locations & Contact -->
-    <main id="page-locations" class="page-section">
-        <section class="max-w-7xl mx-auto px-6 py-16 space-y-12">
-            <div class="text-center max-w-xl mx-auto space-y-3">
-                <span class="text-xs font-mono text-[#2D5A52] uppercase tracking-widest">// Convenient Access</span>
-                <h2 class="font-serif-title text-4xl sm:text-5xl text-stone-900">OUR CLINICS</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 space-y-4">
-                    <h3 class="font-serif-title text-3xl text-stone-900">Bangsar Medical Suites</h3>
-                    <p class="text-xs text-stone-600">Suite 5-02, Menara Bangsar, Jalan Maarof, 59000 Kuala Lumpur</p>
-                    <div class="pt-4 border-t border-stone-200 flex justify-between items-center text-xs">
-                        <span class="text-stone-500">Mon - Sat: 9:00 AM - 6:00 PM</span>
-                        <a href="https://wa.me/60123456789?text=Hi%20Lumina%20Bangsar!%20I%20want%20to%20book%20an%20appointment." target="_blank" class="text-[#2D5A52] font-semibold hover:underline">WhatsApp Clinic →</a>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-3xl border border-stone-200 space-y-4">
-                    <h3 class="font-serif-title text-3xl text-stone-900">Mont Kiara Centre</h3>
-                    <p class="text-xs text-stone-600">G-12, Plaza Mont Kiara, 50480 Kuala Lumpur</p>
-                    <div class="pt-4 border-t border-stone-200 flex justify-between items-center text-xs">
-                        <span class="text-stone-500">Mon - Sat: 9:00 AM - 6:00 PM</span>
-                        <a href="https://wa.me/60129876543?text=Hi%20Lumina%20Mont%20Kiara!%20I%20want%20to%20book%20an%20appointment." target="_blank" class="text-[#2D5A52] font-semibold hover:underline">WhatsApp Clinic →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+<section class="page" id="page-team"><div class="banner"><div class="container"><div class="kicker">Meet the team</div><h1>Friendly dentists, serious expertise.</h1><p>Experienced clinicians who communicate clearly with children, parents and adult patients.</p></div></div><section class="section"><div class="container team-grid">
+<article class="team"><img src="https://images.pexels.com/photos/5998477/pexels-photo-5998477.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Dr. Emily Tan"><div class="team-copy"><h3>Dr. Emily Tan</h3><p>Family & Children's Dentist</p><span>Focused on preventive care and positive first dental experiences.</span></div></article>
+<article class="team"><img src="https://images.pexels.com/photos/5452268/pexels-photo-5452268.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Dr. Aaron Lee"><div class="team-copy"><h3>Dr. Aaron Lee</h3><p>Implant & Restorative Dentist</p><span>Experienced in implants, crowns and restorative treatment.</span></div></article>
+<article class="team"><img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Dr. Nadia Wong"><div class="team-copy"><h3>Dr. Nadia Wong</h3><p>Orthodontic Dentist</p><span>Focused on clear aligners, braces and bite correction.</span></div></article>
+</div></section></section>
 
-    <!-- Page 4: Booking Form -->
-    <main id="page-booking" class="page-section">
-        <section class="max-w-xl mx-auto px-6 py-16">
-            <div class="bg-white p-8 sm:p-12 rounded-3xl border border-stone-200 space-y-6 shadow-xl">
-                <div class="text-center space-y-2">
-                    <span class="text-xs font-mono text-[#2D5A52] uppercase tracking-widest">// Direct Reservation</span>
-                    <h2 class="font-serif-title text-3xl sm:text-4xl text-stone-900">BOOK YOUR VISIT</h2>
-                </div>
-                <form onsubmit="handleDentalBooking(event)" class="space-y-4 text-xs">
-                    <div>
-                        <label class="block text-stone-600 font-medium mb-1">Preferred Clinic Branch</label>
-                        <select id="doc-branch" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#2D5A52]">
-                            <option value="Bangsar">Bangsar Medical Suites</option>
-                            <option value="Mont Kiara">Mont Kiara Centre</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-stone-600 font-medium mb-1">Service Required</label>
-                        <select id="doc-service" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#2D5A52]">
-                            <option value="General Checkup & Cleaning">General Checkup & Cleaning</option>
-                            <option value="Teeth Whitening">Teeth Whitening</option>
-                            <option value="Invisalign Consultation">Invisalign® Consultation</option>
-                            <option value="Veneers / Cosmetic">Veneers / Cosmetic Smile Design</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-stone-600 font-medium mb-1">Full Name</label>
-                        <input type="text" id="doc-name" required placeholder="Jane Doe" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#2D5A52]">
-                    </div>
-                    <div>
-                        <label class="block text-stone-600 font-medium mb-1">Mobile / WhatsApp Number</label>
-                        <input type="tel" id="doc-phone" required placeholder="+60123456789" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 focus:outline-none focus:border-[#2D5A52]">
-                    </div>
-                    <button type="submit" class="w-full bg-[#2D5A52] text-white font-medium py-4 rounded-xl text-xs uppercase tracking-widest hover:bg-stone-900 transition-all shadow-md">
-                        Confirm Appointment via WhatsApp
-                    </button>
-                </form>
-            </div>
-        </section>
-    </main>
+<section class="page" id="page-stories"><div class="banner"><div class="container"><div class="kicker">Patient stories</div><h1>Happy visits, shared.</h1><p>Replace the sample testimonials with verified patient reviews before launch.</p></div></div><section class="section reviews"><div class="container review-grid">
+<article class="review"><div class="stars">★★★★★</div><p>“My child felt comfortable from the first visit, and everything was explained so kindly.”</p><strong>Michelle K.</strong></article>
+<article class="review"><div class="stars">★★★★★</div><p>“Easy booking, bright clinic and a very reassuring team.”</p><strong>Jonathan L.</strong></article>
+<article class="review"><div class="stars">★★★★★</div><p>“The whole family can come to one clinic, which makes everything much easier.”</p><strong>Sara M.</strong></article>
+</div></section></section>
 
-    <!-- Footer -->
-    <footer class="py-8 border-t border-stone-200 text-center text-xs font-mono text-stone-500">
-        <p>© 2026 LUMINA DENTAL SANCTUARY • ALL RIGHTS RESERVED</p>
-    </footer>
+<section class="page" id="page-contact"><div class="banner"><div class="container"><div class="kicker">Contact & booking</div><h1>Let’s plan your family’s next visit.</h1><p>Contact the clinic or submit your preferred appointment details.</p></div></div><section class="section"><div class="container contact-grid">
+<div><div class="contact-card"><h2>Visit HALO</h2><p>Replace these sample details with the clinic’s real information.</p><div class="contact-item"><strong>Phone</strong><a href="tel:+60123456789">+60 12-345 6789</a></div><div class="contact-item"><strong>WhatsApp</strong><a href="https://wa.me/60123456789">Chat with the clinic</a></div><div class="contact-item"><strong>Email</strong><a href="mailto:hello@halodental.com">hello@halodental.com</a></div><div class="contact-item"><strong>Address</strong>42 Jalan Example, Kuala Lumpur, Malaysia</div><div class="contact-item"><strong>Hours</strong>Mon–Fri 9 AM–7 PM · Sat 9 AM–3 PM</div></div>
+<div class="faq"><div class="faq-item"><button class="faq-q">Do you accept children?<span>+</span></button><div class="faq-a"><p>Yes. The clinic offers family and children’s dentistry with age-appropriate care.</p></div></div><div class="faq-item"><button class="faq-q">Can I book through WhatsApp?<span>+</span></button><div class="faq-a"><p>Yes. Contact the clinic directly through WhatsApp to check availability.</p></div></div></div></div>
+<div class="form-card"><h2>Appointment Request</h2><p>The clinic will contact you to confirm availability.</p><form id="bookingForm"><div class="form-grid">
+<div class="field"><label for="name">Full Name</label><input id="name" required></div><div class="field"><label for="phone">Phone Number</label><input id="phone" type="tel" required></div><div class="field"><label for="service">Treatment</label><select id="service" required><option value="">Select treatment</option><option>Children's Dentistry</option><option>Family Check-Up</option><option>Clear Aligners</option><option>Teeth Whitening</option><option>Dental Implants</option><option>Emergency Care</option></select></div><div class="field"><label for="date">Preferred Date</label><input id="date" type="date" required></div><div class="field full"><label for="message">Message</label><textarea id="message" rows="5"></textarea></div>
+</div><button class="btn btn-lav" type="submit" style="width:100%;margin-top:16px">Send Appointment Request</button><div class="success" id="success">Thank you. Connect this demo form to the clinic’s email, CRM or booking system.</div></form></div>
+</div><div class="container map"><iframe src="https://www.google.com/maps?q=Kuala%20Lumpur&output=embed" loading="lazy" title="HALO Family Dental location"></iframe></div></section></section>
+</main>
 
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.className = "nav-btn px-5 py-2 rounded-full uppercase tracking-wider text-stone-600 hover:text-stone-900 transition-all";
-            });
-            document.getElementById('page-' + pageId).classList.add('active');
-            const activeNav = document.getElementById('nav-' + pageId);
-            if (activeNav) {
-                activeNav.className = "nav-btn px-5 py-2 rounded-full uppercase tracking-wider text-stone-900 bg-white shadow-sm transition-all";
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+<footer><div class="container"><div class="footer-grid">
+<div><a class="brand route" href="#/home" data-route="home" style="color:#fff"><span class="mark">H</span>HALO Family Dental</a><p style="margin-top:15px">Gentle, happy dentistry for every stage of family life.</p></div>
+<div><h3>Explore</h3><a class="route" href="#/space" data-route="space">Our Space</a><a class="route" href="#/team" data-route="team">Dentists</a><a class="route" href="#/stories" data-route="stories">Stories</a></div>
+<div><h3>Treatments</h3><a class="route" href="#/services" data-route="services">Children</a><a class="route" href="#/services" data-route="services">Aligners</a><a class="route" href="#/services" data-route="services">Implants</a></div>
+<div><h3>Contact</h3><a href="tel:+60123456789">+60 12-345 6789</a><a href="mailto:hello@halodental.com">Email Clinic</a><a class="route" href="#/contact" data-route="contact">Book Visit</a></div>
+</div><div class="footer-bottom"><span>© <span id="year"></span> HALO Family Dental.</span><span>Privacy · Terms · Medical Disclaimer</span></div></div></footer>
 
-        function handleDentalBooking(e) {
-            e.preventDefault();
-            const branch = document.getElementById('doc-branch').value;
-            const service = document.getElementById('doc-service').value;
-            const name = document.getElementById('doc-name').value;
-            const phone = document.getElementById('doc-phone').value;
-            const msg = `Hi%20Lumina%20Dental!%20I%20would%20like%20to%20book%20a%20${encodeURIComponent(service)}%20appointment%20at%20the%20${encodeURIComponent(branch)}%20branch.%20My%20Name:%20${encodeURIComponent(name)}%20(${encodeURIComponent(phone)}).`;
-            window.open(`https://wa.me/60123456789?text=${msg}`, '_blank');
-        }
-    </script>
+<a class="float-wa" href="https://wa.me/60123456789" aria-label="WhatsApp">✆</a>
+<div class="modal" id="modal"><div class="modal-card"><img class="modal-img" id="modalImg" src="" alt=""><div class="modal-content"><button class="close" id="close">×</button><div class="kicker">Treatment details</div><h3 id="modalTitle"></h3><p id="modalText"></p><ul class="modal-list" id="modalList"></ul><a class="btn btn-lav" id="modalCta" href="#">Ask About This Treatment</a></div></div></div>
+
+<script>
+document.addEventListener("error",e=>{const i=e.target;if(i.tagName==="IMG"){i.style.display="none";i.parentElement.style.background="linear-gradient(135deg,#7b62d9,#7fd8ee)"}},true);
+const routes=["home","services","space","team","stories","contact"],pages=document.querySelectorAll(".page"),links=document.querySelectorAll(".route"),menu=document.getElementById("menu");
+function getRoute(){return location.hash.replace("#/","")||"home"}function show(r){if(!routes.includes(r))r="home";pages.forEach(p=>p.classList.toggle("active",p.id==="page-"+r));links.forEach(a=>a.classList.toggle("active",a.dataset.route===r));window.scrollTo({top:0,behavior:"instant"});menu.classList.remove("open")}
+window.addEventListener("hashchange",()=>show(getRoute()));show(getRoute());document.getElementById("menuBtn").onclick=()=>menu.classList.toggle("open");
+const data={
+children:{title:"Children's Dentistry",text:"Age-appropriate care helps children build positive dental habits and feel comfortable during visits.",list:["Gentle examinations","Preventive advice for parents","Positive first-visit approach"],image:"https://images.pexels.com/photos/4269694/pexels-photo-4269694.jpeg?auto=compress&cs=tinysrgb&w=1200"},
+family:{title:"Family Check-Ups",text:"Convenient preventive care for children, adults and seniors in one clinic.",list:["Routine oral-health review","Scaling and polishing","Family-friendly scheduling"],image:"https://images.pexels.com/photos/4269688/pexels-photo-4269688.jpeg?auto=compress&cs=tinysrgb&w=1200"},
+aligners:{title:"Clear Aligners",text:"Removable clear trays gradually reposition teeth using a digitally planned sequence.",list:["Discreet treatment","Removable trays","Digital progress planning"],image:"https://images.pexels.com/photos/6529113/pexels-photo-6529113.jpeg?auto=compress&cs=tinysrgb&w=1200"},
+whitening:{title:"Teeth Whitening",text:"Dentist-supervised whitening can brighten the natural shade of teeth through a controlled treatment plan.",list:["Professional supervision","More even result","Maintenance guidance"],image:"https://images.pexels.com/photos/6627538/pexels-photo-6627538.jpeg?auto=compress&cs=tinysrgb&w=1200"},
+implants:{title:"Dental Implants",text:"Implants replace missing teeth using a carefully planned foundation and custom restoration.",list:["Restores function","Digital planning where suitable","Long-term maintenance advice"],image:"https://images.pexels.com/photos/6502308/pexels-photo-6502308.jpeg?auto=compress&cs=tinysrgb&w=1200"},
+emergency:{title:"Emergency Dental Care",text:"Prompt assessment for toothache, swelling, trauma or damaged restorations.",list:["Urgent clinical assessment","Pain and swelling review","Clear next-step guidance"],image:"https://images.pexels.com/photos/3779705/pexels-photo-3779705.jpeg?auto=compress&cs=tinysrgb&w=1200"}};
+const modal=document.getElementById("modal");
+document.querySelectorAll("[data-service]").forEach(b=>b.onclick=()=>{const d=data[b.dataset.service];modalTitle.textContent=d.title;modalText.textContent=d.text;modalList.innerHTML=d.list.map(x=>`<li>${x}</li>`).join("");modalImg.src=d.image;modalImg.alt=d.title;modalCta.href="https://wa.me/60123456789?text="+encodeURIComponent("Hello HALO Dental, I would like to ask about "+d.title+".");modal.classList.add("open");document.body.classList.add("lock")});
+function closeM(){modal.classList.remove("open");document.body.classList.remove("lock")}document.getElementById("close").onclick=closeM;modal.onclick=e=>{if(e.target===modal)closeM()};document.addEventListener("keydown",e=>{if(e.key==="Escape")closeM()});
+document.querySelectorAll(".faq-q").forEach(b=>b.onclick=()=>{const i=b.parentElement;i.classList.toggle("active");b.querySelector("span").textContent=i.classList.contains("active")?"−":"+"});
+const date=document.getElementById("date");date.min=new Date().toISOString().split("T")[0];document.getElementById("bookingForm").onsubmit=e=>{e.preventDefault();success.style.display="block";e.target.reset()};document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
